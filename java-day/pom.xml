@@ -6,7 +6,8 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>java-nio</module>
     <module>java-aio</module>
+    <module>java-nio</module>
+    <module>java-resouces</module>
   </modules>
 </project>
