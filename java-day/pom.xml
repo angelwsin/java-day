@@ -41,5 +41,6 @@
     <module>java-web-container</module>
     <module>java-distribute</module>
     <module>java-sql</module>
+    <module>java-3utils</module>
   </modules>
 </project>
