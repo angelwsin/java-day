@@ -9,5 +9,32 @@
     <module>java-aio</module>
     <module>java-nio</module>
     <module>java-resouces</module>
+    <module>java-jvm</module>
+    <module>java-classloader</module>
+    <module>java-javacc</module>
+    <module>java-jmx</module>
+    <module>java-jndi</module>
+    <module>java-bio</module>
+    <module>java-collection</module>
+    <module>java-spi</module>
+    <module>java-classcode</module>
+    <module>java-thread</module>
+    <module>java-concurrent</module>
+    <module>java-synchronize</module>
+    <module>java-instrumentation</module>
+    <module>java-scala</module>
+    <module>java-aop</module>
+    <module>java-jpda</module>
+    <module>java-tools</module>
+    <module>java-security</module>
+    <module>java-encry-decry</module>
+    <module>java-ssl-tls</module>
+    <module>java-rmi</module>
+    <module>java-api</module>
+    <module>java-beans</module>
+    <module>java-regex</module>
+    <module>java-xml</module>
+    <module>java-ws</module>
+    <module>java-rpc</module>
   </modules>
 </project>
