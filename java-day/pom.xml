@@ -39,5 +39,6 @@
     <module>java-design-pattern</module>
     <module>java-algorithm</module>
     <module>java-web-container</module>
+    <module>java-distribute</module>
   </modules>
 </project>
