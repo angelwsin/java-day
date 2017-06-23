@@ -36,5 +36,7 @@
     <module>java-xml</module>
     <module>java-ws</module>
     <module>java-rpc</module>
+    <module>java-design-pattern</module>
+    <module>java-algorithm</module>
   </modules>
 </project>
