@@ -38,5 +38,6 @@
     <module>java-rpc</module>
     <module>java-design-pattern</module>
     <module>java-algorithm</module>
+    <module>java-web-container</module>
   </modules>
 </project>
