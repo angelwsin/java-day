@@ -34,14 +34,40 @@ public class App
         //key properties 没有顺序的key/value 中间使用,分割 使用通配符 *(0or more) ?(1)
         //为了避免冲突 可以使用包名 类名
         ObjectName  jd  = new ObjectName("com.jmx:type=JmxBean");
-        //注册MBean  MBean 的实现
+        //注册MBean  MBean 的实现   查找MBean接口
         //1 实现 DynamicMBean  
         //2 Standard MBean  子类的类名+MBean = 父类的类名
-        //3. 子类使用注解 @MBean
+        //3. 接口使用注解 @MBean  并且 类名以MBean 结尾 
          mBeanServer.registerMBean(new Print(), jd);
+         
         
-        mBeanServer.invoke(jd, "print", new String[]{"print hello "}, new String[]{"java.lang.String"});
+       // mBeanServer.invoke(jd, "print", new String[]{"print hello "}, new String[]{"java.lang.String"});
         
         
+        /*MBean 注册到MBeanServer 中的组件
+         * 
+         * ManagementFactory  MBeanServer工厂
+         * MBeanServerBuilder 
+         * MBeanServer builder 可以继承Builder定制自己的MBeanServer
+         * 自定义 builder插入通过 设置变量 JmxProperties.JMX_INITIAL_BUILDER=builder class
+         * MBeanServerDelegate  delegate that should be used by the MBeanServer implementation.
+         * 
+         * mbsInterceptor (MBeanServer)delegate注册到mbsInterceptor上
+         * 
+         */
+        
+        /*
+         * 使用的设计模式
+         * 
+         * 工厂
+         * builder
+         * 委托
+         */
+         String runtimeName = ManagementFactory.getRuntimeMXBean().getName();
+         // format: "pid@hostname"
+         
+         System.out.println(runtimeName.substring(0, runtimeName.indexOf("@")));
+         Thread.sleep(Integer.MAX_VALUE);
+         //jconsole
     }
 }
