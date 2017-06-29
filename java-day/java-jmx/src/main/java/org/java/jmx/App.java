@@ -69,5 +69,15 @@ public class App
          System.out.println(runtimeName.substring(0, runtimeName.indexOf("@")));
          Thread.sleep(Integer.MAX_VALUE);
          //jconsole
+         
+         /*
+          * MXBeans
+          * 1)Standard MBeans 子类的类名+MBean = 父类的类名
+          * 2)MXBeans          @MXBean
+          * 3)Dynamic MBeans  DynamicMBean interface
+          * 4)Open MBeans      javax.management.openmbean.
+          * 5)Model MBeans     javax.management.modelmbean.
+          * 
+          */
     }
 }
