@@ -42,5 +42,7 @@
     <module>java-distribute</module>
     <module>java-sql</module>
     <module>java-3utils</module>
+    <module>java-test</module>
+    <module>java-jms</module>
   </modules>
 </project>
