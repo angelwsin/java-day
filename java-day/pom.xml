@@ -44,5 +44,6 @@
     <module>java-3utils</module>
     <module>java-test</module>
     <module>java-jms</module>
+    <module>java-jni</module>
   </modules>
 </project>
