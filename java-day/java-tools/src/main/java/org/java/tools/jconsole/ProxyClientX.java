@@ -12,11 +12,9 @@ import javax.management.remote.JMXConnector;
 import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
 import javax.management.remote.rmi.RMIConnector;
+import javax.management.remote.rmi.RMIServer;
 
-import com.sun.tools.attach.AttachNotSupportedException;
 import com.sun.tools.attach.VirtualMachine;
-
-import sun.tools.jconsole.ProxyClient;
 
 
 
@@ -32,6 +30,7 @@ public class ProxyClientX {
 	 private VirtualMachine lvm;
 	private String userName;
 	private String password;
+	private RMIServer stub = null;
 	
 	 private static Map<String, ProxyClientX> cache;
 	
@@ -65,7 +64,7 @@ public class ProxyClientX {
 
 
     //远程 <hostname>:<port> 或 service:jmx:<protocol>:<sap>
-	public void conect(){
+	public void conect()throws Exception{
 		//本地连接
 		if(this.jmxUrl==null&&"localhost".equals(hostName)&&this.port==0){
 			this.mbsc = ManagementFactory.getPlatformMBeanServer();
@@ -76,41 +75,37 @@ public class ProxyClientX {
 					this.jmxUrl = new JMXServiceURL(address);
 				}
 			}
-				       localObject = new HashMap();
-				       if (paramBoolean) {
+				       Map<String,Object>localObject = new HashMap();
+				       if (false) {
 				         ((Map)localObject).put("jmx.remote.x.check.stub", "true");
 				       }
 				 
-				       if ((this.userName == null) && (this.password == null)) {
 				         if (isVmConnector())
 				         {
-				           if (this.stub == null) {
+				           /*if (this.stub == null) {
 				             checkSslConfig();
-				           }
+				           }*/
 				           this.jmxc = new RMIConnector(this.stub, null);
 				           this.jmxc.connect((Map)localObject);
 				         } else {
 				           this.jmxc = JMXConnectorFactory.connect(this.jmxUrl, (Map)localObject);
 				         }
-				       } else {
-				         ((Map)localObject).put("jmx.remote.credentials", new String[] { this.userName, this.password });
-				 
-				         if (isVmConnector())
-				         {
-				           if (this.stub == null) {
-				             checkSslConfig();
-				           }
-				           this.jmxc = new RMIConnector(this.stub, null);
-				           this.jmxc.connect((Map)localObject);
-				         } else {
-				           this.jmxc = JMXConnectorFactory.connect(this.jmxUrl, (Map)localObject);
-				         }
-				       }
+				       
 				       this.mbsc = this.jmxc.getMBeanServerConnection();
 		}
 	}
 	
-	public static ProxyClientX getProxyClient(VirtualMachine paramLocalVirtualMachine)
+	private boolean isVmConnector() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+
+
+
+
+
+    public static ProxyClientX getProxyClient(VirtualMachine paramLocalVirtualMachine)
 			    throws IOException
 			  {
 			     String str = getCacheKey(paramLocalVirtualMachine);

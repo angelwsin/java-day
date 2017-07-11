@@ -37,6 +37,7 @@ public class Server {
          
     }
     
+     //内核态/用户态
     
     public static class IOHandler implements Runnable{
         

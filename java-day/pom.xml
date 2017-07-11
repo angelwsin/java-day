@@ -45,5 +45,6 @@
     <module>java-test</module>
     <module>java-jms</module>
     <module>java-jni</module>
+    <module>java-spring</module>
   </modules>
 </project>

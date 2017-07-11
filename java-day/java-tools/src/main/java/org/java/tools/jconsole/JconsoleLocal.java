@@ -33,7 +33,7 @@ public class JconsoleLocal {
 		}
 		
 		if(vmSelected!=null){
-			vmSelected.
+			//vmSelected.
 		}
 		
 	}
