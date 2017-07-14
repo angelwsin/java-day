@@ -5,3 +5,9 @@ java
 javap   字节码反汇编
 
 javacc  JAVA开发的最受欢迎的语法分析生成器
+
+
+jsp
+jstack  线程
+jstat  “Java Virtual Machine statistics monitoring tool  对Heap size和垃圾回收状况的监控     classloader，compiler，gc相关信息
+jmap   内存中对象的工具，甚至可以将VM 中的heap，以二进制输出成文本

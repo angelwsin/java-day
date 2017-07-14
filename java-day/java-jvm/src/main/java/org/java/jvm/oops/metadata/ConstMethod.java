@@ -1,6 +1,6 @@
 package org.java.jvm.oops.metadata;
 
-import org.java.jvm.allocation.MetaspaceObj;
+import org.java.jvm.memory.MetaspaceObj;
 
 public class ConstMethod extends MetaspaceObj{
 

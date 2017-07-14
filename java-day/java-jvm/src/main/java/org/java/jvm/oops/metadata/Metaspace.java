@@ -1,6 +1,6 @@
 package org.java.jvm.oops.metadata;
 
-import org.java.jvm.allocation.CHeapObj;
+import org.java.jvm.memory.CHeapObj;
 
 
 // Metaspace

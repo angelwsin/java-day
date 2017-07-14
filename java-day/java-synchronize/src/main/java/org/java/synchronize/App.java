@@ -8,6 +8,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        new App().say();
+    }
+    
+    
+    
+    
+    public synchronized void say(){
+        
+        System.out.println("hello ");
     }
 }

@@ -46,5 +46,6 @@
     <module>java-jms</module>
     <module>java-jni</module>
     <module>java-spring</module>
+    <module>java-jdbc</module>
   </modules>
 </project>
