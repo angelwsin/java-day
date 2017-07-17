@@ -1,8 +1,5 @@
 package org.java.jvm.oops;
 
-import org.java.jvm.oops.metadata.ConstMethod;
-import org.java.jvm.oops.metadata.MethodData;
-
 public class Oop {
     
     

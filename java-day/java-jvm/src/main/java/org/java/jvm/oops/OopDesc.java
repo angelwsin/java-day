@@ -10,7 +10,7 @@ import org.java.jvm.oops.klass.Klass;
 //no virtual functions allowed
 
 
-// oops 基类         oop 对象对应一个 java对象
+// 对象头   
 public class OopDesc {
     
      private volatile MarkOopDesc _mark;
