@@ -35,6 +35,8 @@ import org.java.jvm.oops.OopDesc;
 //------------------------------------------------------------------------------------------------------------------------
 //Base class for all handles. Provides overloading of frequently
 //used operators for ease of use.
+
+//句柄
 public class Handle {
     
 	OopDesc _handle;
