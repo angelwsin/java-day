@@ -7,3 +7,16 @@ package org.java.jvm.oops;
 public class InstanceOopDesc extends OopDesc{
 
 }
+
+
+
+/*
+    stack    obj          heap  
+                          
+                          instanceOopDesc                                     
+                                                                实例数据
+
+                                                    
+                                                                                                                             方法区
+                                                  instanceKlass                                                                                                                      
+*/

@@ -1,6 +1,6 @@
 package org.java.jvm.runtime;
 
-import org.java.jvm.oops.Oop;
+import org.java.jvm.oops.OopDesc;
 
 //------------------------------------------------------------------------------------------------------------------------
 //In order to preserve oops during garbage collection, they should be
@@ -37,7 +37,7 @@ import org.java.jvm.oops.Oop;
 //used operators for ease of use.
 public class Handle {
     
-    Oop _handle;
+	OopDesc _handle;
 
 
 }
