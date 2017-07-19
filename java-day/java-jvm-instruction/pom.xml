@@ -8,9 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>java-day</groupId>
-  <artifactId>java-jpda</artifactId>
+  <artifactId>java-jvm-instruction</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>java-jpda</name>
+  <name>java-jvm-instruction</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,13 +22,5 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <!-- jvm 工具  sa hotspot 为外部程序提供的代理库，查看虚拟机内部数据-->
-         <dependency>  
-            <groupId>sun.jvm</groupId>  
-            <artifactId>sa-jdi</artifactId>  
-            <version>1.8.0</version>  
-            <scope>system</scope>  
-            <systemPath>${env.JAVA_HOME}/lib/sa-jdi.jar</systemPath>  
-        </dependency>
   </dependencies>
 </project>

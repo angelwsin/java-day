@@ -1,8 +1,12 @@
 package org.java.classloader.hotdeploy;
 
 import java.io.FileInputStream;
+import java.util.List;
 
 import org.apache.commons.io.IOUtils;
+
+import com.sun.tools.attach.VirtualMachine;
+import com.sun.tools.attach.VirtualMachineDescriptor;
 
 public class HotDeployClassLoader extends ClassLoader{
     
@@ -13,7 +17,8 @@ public class HotDeployClassLoader extends ClassLoader{
     
     
      public HotDeployClassLoader() {
-        // TODO Auto-generated constructor stub
+         //ClassLoader.getSystemClassLoader(); 指定为父加载器
+         super();
     }
     
     @Override
@@ -39,6 +44,9 @@ public class HotDeployClassLoader extends ClassLoader{
         HotDeployClassLoader classLoader = new HotDeployClassLoader();
         Class<?> xclass = classLoader.loadClass("org.java.service.Service");
         System.out.println(xclass);
+        
+       
+         
     }
   
 }

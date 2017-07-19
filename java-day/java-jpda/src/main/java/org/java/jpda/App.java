@@ -6,8 +6,16 @@ package org.java.jpda;
  */
 public class App 
 {
+    /*JDB是基于文本和命令行的调试工具(例如Sun JDB
+     * jdb
+     * 
+     */
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        /*
+         * hotspot db
+         */
+        sun.jvm.hotspot.HSDB.main(args);
+        
     }
 }

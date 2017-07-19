@@ -47,5 +47,6 @@
     <module>java-jni</module>
     <module>java-spring</module>
     <module>java-jdbc</module>
+    <module>java-jvm-instruction</module>
   </modules>
 </project>
