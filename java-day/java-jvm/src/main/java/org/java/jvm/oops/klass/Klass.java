@@ -45,5 +45,8 @@ import org.java.jvm.oops.metadata.Metadata;
 
 //javaclass 对象指向它的类元数据的指针
 public class Klass extends Metadata{
+    
+    
+   // find_method_index    使用二分查找  binary_search
 
 }

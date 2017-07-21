@@ -17,6 +17,27 @@ public class Mapx {
         System.out.println(9&7);
         System.out.println(9&8);
         System.out.println(9&15);
+        
+        
+        //map 扩容
+        
+        //1.7 遍历 从新计算hash值
+        
+        //1.8  二倍扩容
+        /**
+         *  hash&(n-1)  低位不变
+         *  hash&n      高位         index+old
+         *  
+         *  举例
+         *  
+         *  size  16    1111
+         *  
+         *  size  32    11111
+         *                       
+         *  低位不变     hash = 8     1000   oldIndex = 8   newIndex= 8 
+         *         hash = 24    11000  oldIndex = 8   newIndex= 8+16 = 24
+         *  
+         */
     }
 
 }
