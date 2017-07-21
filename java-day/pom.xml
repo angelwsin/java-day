@@ -48,5 +48,7 @@
     <module>java-spring</module>
     <module>java-jdbc</module>
     <module>java-jvm-instruction</module>
+    <module>java-hotspot</module>
+    <module>java-sa-jdi</module>
   </modules>
 </project>
