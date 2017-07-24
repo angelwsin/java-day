@@ -1,7 +1,7 @@
 package org.java.jpda;
 
 /**
- * Hello world!
+ * Java 的调试体系—— JPDA
  *
  */
 public class App 

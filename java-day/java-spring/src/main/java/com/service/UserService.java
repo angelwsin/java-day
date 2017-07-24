@@ -8,5 +8,15 @@ public class UserService {
         
         System.out.println("user ");
     }
+    
+    
+    public void testUser(){
+        
+        System.out.println("test user "); 
+    }
+    
+    
+    
+    
 
 }

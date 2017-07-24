@@ -13,15 +13,15 @@
         
         
         <bean id="userService" class="com.service.UserService"/>
-        <bean id="logInterceptor" class="com.spring.aop.LogInterceptor"/>
-        <bean id="logInterceptory" class="com.spring.aop.LogInterceptory"/>
+        <!-- <bean id="logInterceptor" class="com.spring.aop.LogInterceptor"/>
+        <bean id="logInterceptory" class="com.spring.aop.LogInterceptory"/> -->
         <aop:aspectj-autoproxy/>
         <bean id="logInterceptorx" class="com.spring.aop.LogInterceptorx"/>
         <bean id="regexpMethodPointcutAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor" >
             <property name="advice" ref="logInterceptorx"/>
              <property name="patterns">
                 <list>
-                <value>com.service.*</value>
+                <value>com.service.UserService.getUser</value>
                 </list>
              </property>
         </bean>

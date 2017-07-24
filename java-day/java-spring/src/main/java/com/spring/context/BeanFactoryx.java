@@ -12,6 +12,7 @@ public class BeanFactoryx {
         
         UserService userService = (UserService) context.getBean("userService");
         userService.getUser();
+        userService.testUser();
         
         /*UserService userServicex = (UserService) context.getBean("userServicex");
         userServicex.getUser();*/
