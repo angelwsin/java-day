@@ -38,8 +38,10 @@ public class FileDesc {
             try(FileOutputStream out = new FileOutputStream(file,false);){
                 FileDescriptor  fd  =     out.getFD();
                 Field  fds =  FileDescriptor.class.getDeclaredField("handle");
+                Field  fdx  =  FileDescriptor.class.getDeclaredField("fd");
                 fds.setAccessible(true);
-                System.out.println(fds.get(fd));
+                fdx.setAccessible(true);
+                System.out.println(fdx.get(fd)+":"+fds.get(fd));
                 for(String content : str){
                     out.write((getName()+content).getBytes());
                     System.out.println(System.currentTimeMillis()+":"+getName()+" writer :"+content);

@@ -50,5 +50,6 @@
     <module>java-jvm-instruction</module>
     <module>java-hotspot</module>
     <module>java-sa-jdi</module>
+    <module>java-scripting</module>
   </modules>
 </project>

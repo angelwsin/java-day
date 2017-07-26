@@ -20,7 +20,14 @@ public class NamingServer {
         //如果没有指定 默认com.sun.jndi.url
         //自定义 jndi.properties
         InitialContext initContext = new InitialContext();
-        
+
+        /**
+         * RMI URL Format The format of an RMI URL is one of the following:
+         * 
+         * rmi://[host][:port][/[object]]
+         * 
+         * rmi:[/][object]
+         */
         
         Remote stub =   UnicastRemoteObject.exportObject(new UserServiceImpl(), 5434);
        initContext.bind("rmi://localhost:9090/userSerice", stub);

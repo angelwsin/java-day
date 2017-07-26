@@ -40,6 +40,15 @@ import org.java.jvm.oops.OopDesc;
 public class Handle {
     
 	OopDesc _handle;
+	//oop     obj() const                            { return _handle == NULL ? (oop)NULL : *_handle; }
+	//oop     operator () () const                   { return obj(); }
 
+	
+	
+	
+	
+	
+	
+	
 
 }

@@ -23,5 +23,21 @@ public class App
          * classFileParser.cpp  解析class文件
          * systemDictionary.cpp 系统字典  加载的类存放在此
          */
+        
+        
+        
+        
+        
+        /**
+         * 
+         * Class signature
+         * 
+         * 
+         * L对象 [数组
+         * 
+         * Z', 'C', 'F', 'D', 'B', 'S', 'I', 'J', 'L', '[', 'V'
+         *  "boolean", "char", "float", "double", "byte", "short", "int", "long", "object", "array", "void",
+         * 
+         */
     }
 }

@@ -127,5 +127,30 @@ public class ClassLoaderX
      * 
      * 跟踪类的加载
      * +TraceClassLoading
+     * 
+     * 
+     * 
+     * _well_known_klasses
+     * 
+     * 
+     * 
+     */
+   /* enum x{
+        Object_klass_knum, java_lang_Object_knum = Object_klass_knum, \
+                String_klass_knum, java_lang_String_knum = String_klass_knum, \  
+    }
+    static Klass* Object_klass() { return check_klass_Pre(_well_known_klasses[Object_klass_knum]); } \
+    static Klass** Object_klass_addr() {                                                                       \
+      return &SystemDictionary::_well_known_klasses[SystemDictionary::Object_klass_knum];           \
+    } \
+    
+    *
+    */
+    
+    
+    /**
+     * 类加载 过程 
+     * 
+     * 是不是 根类加载器 是
      */
 }

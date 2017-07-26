@@ -10,7 +10,7 @@ import org.java.jvm.oops.klass.Klass;
 //no virtual functions allowed
 
 
-// 对象头   
+// 对象头         oop-klass 二分模型
 public class OopDesc {
     
      private volatile MarkOopDesc _mark;
