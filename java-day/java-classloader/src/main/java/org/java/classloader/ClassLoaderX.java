@@ -129,8 +129,13 @@ public class ClassLoaderX
      * +TraceClassLoading
      * 
      * 
-     * 
+     * 根类加载器加载  c++实现
      * _well_known_klasses
+     * 
+     * java classloader 的类加载器加载    JavaCalls::call
+     * 
+     * 
+     *  ClassFileParser::parseClassFile 解析字节码  生成  Klass对象
      * 
      * 
      * 

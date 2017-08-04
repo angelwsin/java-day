@@ -1,4 +1,4 @@
-package org.java.resouces;
+package org.java.jvmti;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -17,7 +17,7 @@ public class AppTest
      */
     public AppTest( String testName )
     {
-        
+        super( testName );
     }
 
     /**

@@ -51,5 +51,7 @@
     <module>java-hotspot</module>
     <module>java-sa-jdi</module>
     <module>java-scripting</module>
+    <module>java-jvmti</module>
+    <module>java-transaction</module>
   </modules>
 </project>
