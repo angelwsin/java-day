@@ -1,7 +1,7 @@
 package org.java.jls;
 
 /**
- * Hello world!
+ * http://docs.oracle.com/javase/specs/jls/se8/jls8.pdf
  *
  */
 public class App 

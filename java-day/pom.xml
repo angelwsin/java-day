@@ -53,5 +53,6 @@
     <module>java-scripting</module>
     <module>java-jvmti</module>
     <module>java-transaction</module>
+    <module>java-cache</module>
   </modules>
 </project>
