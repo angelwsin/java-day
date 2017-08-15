@@ -14,5 +14,11 @@ sys(app)  系统类加载器  classpath
           URLClassLoader
           
               Launcher$AppClassLoader  Launcher$ExtClassLoader
+              
+              
+
+
+hotswap
+http://blog.csdn.net/nameix/article/details/52277464
            
                 

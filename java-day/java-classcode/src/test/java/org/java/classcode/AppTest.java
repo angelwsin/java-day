@@ -1,38 +1,36 @@
 package org.java.classcode;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+    
+    
+    public static void main(String[] args) {
+        
+        new AppTest().test();
     }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    
+    
+    public void test(){
+        int x =0;
+        try {
+             x = 9;
+            String y = "ee"; 
+        } catch (Exception e) {
+           e.printStackTrace();
+        }finally {
+            x = 10;
+        }
+       
+        
     }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    
+    public int  re(){
+        
+        int x = Integer.valueOf("x");
+        return x;
     }
+    
 }

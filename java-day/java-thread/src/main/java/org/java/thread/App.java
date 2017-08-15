@@ -1,7 +1,29 @@
 package org.java.thread;
 
 /**
- * Hello world!
+ * 
+ * 
+ * 
+ * 
+ * java线程模型 
+ * 
+ * 
+ * java 层                                 Thread.java   的属性 eetop 引用 JavaThread的地址
+ * 
+ * 
+ * jvm c++ (管理和关联层)  承上:  jvm的线程都是Thread的子类 包括 有java层表示的线程 JavaThread （JavaThread的属性threadObj引用 java的线程对象oop) 
+ *                           JavaThread 创建时会指定线程要执行的方法（如 java线程的执行方法java_start 线程方法  Thread ->run）
+ *                     启下:  osThread 是对平台线程的封装 
+ * 
+ * 
+ * 系统层              各个操作系统的层的api的支持
+ * 
+ * 
+ * 
+ * 
+ * 实例：windows 平台下线程的创建和调用
+ * 
+ * 
  *
  */
 public class App 

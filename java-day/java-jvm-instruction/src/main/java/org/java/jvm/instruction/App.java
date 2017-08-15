@@ -1,7 +1,7 @@
 package org.java.jvm.instruction;
 
 /**
- * Hello world!
+ * http://blog.csdn.net/sum_rain/article/details/39892219
  *
  */
 public class App 
@@ -29,6 +29,8 @@ public class App
          * 
          * 
          * 栈帧
+         * 
+         * A frame is used to store data and partial results, as well as to perform dynamic linking, return values for methods, and dispatch exceptions.
          * 
          * JVM为每个方法调用创建一个新的栈帧并推到每个方法调用的栈顶。当方法正常返回或者遇到了未捕获的异常，这个栈帧将被移除。想要了解更多的关于异常处理的可以看下面的“异常表”部分。
          * 
@@ -59,6 +61,11 @@ public class App
          * 动态链接
          * 
          * 每个栈帧都包含了运行时常量池的引用。这个引用指向了这个栈帧正在执行的方法所在的类的常量池，它对动态链接提供了支持。
+         * 
+         * 
+         * 方法异常调用
+         * 没有 handled exception   执行 athrow instruction  当前方法没有 caught 返回值被终端  调用 永远没有返回值
+         * 
          */
         
         

@@ -13,7 +13,9 @@ import sun.misc.Launcher;
 import sun.misc.URLClassPath;
 
 /**
- * Hello world!
+ * 热部署
+ * 动态加载类  动态脚本
+ * 动态编译
  *
  */
 public class ClassLoaderX 
@@ -89,7 +91,6 @@ public class ClassLoaderX
       dic.classesDo(new ClassVisitor() {
         
 
-        @Override
         public void visit(Klass klass) {
             System.out.println(klass.getAddress()+":"+klass.getName());
             

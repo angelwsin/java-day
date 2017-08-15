@@ -1,4 +1,4 @@
-package org.java.jvm.datatypes;
+package com.jvm.datatypes;
 
 
 /**
@@ -81,6 +81,8 @@ public class PrimitiveTypes {
 		 * operate on boolean values are compiled to use values of the Java
 		 * Virtual Machine int data type.
 		 */
+		   
+		   
 		   
 	}
 

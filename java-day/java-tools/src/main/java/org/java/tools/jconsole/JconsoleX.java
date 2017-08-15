@@ -28,6 +28,17 @@ public class JconsoleX {
     		System.out.println(str);
     		localVirtualMachine.detach();
     	}*/
+        /**
+         * 
+         * 底层实现
+         * 
+         * 两个进行通信  
+         * 把  attach 组装成命令  调到   pid 对应进程的 queue 中
+         * 
+         * pid jvm中的 attachListener线程 从队列中取出命令处理
+         * 
+         * 
+         */
         VirtualMachine vm = VirtualMachine.attach(String.valueOf(pid));
 		
 		 Properties localProperties = vm.getAgentProperties();

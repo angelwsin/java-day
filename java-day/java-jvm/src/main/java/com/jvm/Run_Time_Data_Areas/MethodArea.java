@@ -8,9 +8,15 @@ public class MethodArea {
     system process. It stores per-class structures such as the run-time constant pool,
     field and method data, and the code for methods and constructors, including
     the special methods (§2.9) used in class and instance initialization and interface
-    initialization*/
+    initialization
+    jvm规范  方法区是堆的一个逻辑分区，可以是不连续的  最简单的实现就是没哟gc和压缩
+    */
     
-    
+    /**
+     * 
+     * @author Administrator
+     *
+     */
     
     class Run_Time_Constant_Pool{
        /* A run-time constant pool is a per-class or per-interface run-time representation
