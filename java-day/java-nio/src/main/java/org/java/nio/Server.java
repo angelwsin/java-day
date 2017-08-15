@@ -5,10 +5,13 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.spi.SelectorProvider;
+import java.util.Iterator;
+import java.util.Set;
 
 
 /*
  * http://www.cnblogs.com/Anker/p/3265058.html
+ * http://www.cnblogs.com/jeakeven/p/5435916.html
  */
 public class Server {
     
@@ -55,7 +58,11 @@ public class Server {
         selector.select();//阻塞
         //selector.selectNow() 和上一个方法不同的是 selectNow 非阻塞没有就绪的返回 0 
         
-        selector.selectedKeys();
+        Set<SelectionKey> keys  = selector.selectedKeys();
+        
+        Iterator<SelectionKey>  it = keys.iterator();
+        
+        
         
     }
     
