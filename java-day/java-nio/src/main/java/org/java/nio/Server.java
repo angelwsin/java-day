@@ -60,9 +60,9 @@ public class Server {
     }
     
     
-   //select/poll 的实现 
+   //windows 下的实现   select/poll 的实现 
     
-    //SelectThread 负责  subSelector.poll(index);  监听 事件
+    //SelectThread 负责  subSelector.poll(index);  监听 事件  
     //有更新 则 更新 selectedKeys
 
 }
