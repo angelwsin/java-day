@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * Hello world!
+ * http://blog.csdn.net/cywosp/article/details/8767327
  *
  */
 public class App 
@@ -23,6 +23,8 @@ public class App
             fds.setAccessible(true);
             System.out.println(handl=(Long)fds.get(fd));
             out.write("hello".getBytes());
+            // write不够，需要fsync 同步写文件刷新到磁盘
+            out.getFD().sync();
         }catch (Exception e) {
         }finally {
             out.close();
