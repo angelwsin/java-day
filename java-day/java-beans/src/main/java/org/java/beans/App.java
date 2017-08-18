@@ -16,6 +16,9 @@ import org.java.beans.editor.IntegerPrppertyEditor;
  * losing customers that use proprietary platforms, because beans interoperate with ActiveX, OpenDoc,
  *  and LiveConnect. Long-term persistence for JavaBeans enables you to read and write a bean as a 
  *  textual representation of its property values.
+ *  
+ *  package
+ *  java.beans.*
  *
  */
 public class App 
