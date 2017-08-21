@@ -1,13 +1,16 @@
 package org.java.resouces;
 
+import java.net.URL;
+
 /**
- * Hello world!
+ * url uri urn 
  *
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args )throws Exception
     {
-        System.out.println( "Hello World!" );
+         URL url = new URL("");
+         url.openConnection();
     }
 }
