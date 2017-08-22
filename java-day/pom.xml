@@ -55,5 +55,6 @@
     <module>java-transaction</module>
     <module>java-cache</module>
     <module>java-logs</module>
+    <module>java-net</module>
   </modules>
 </project>
