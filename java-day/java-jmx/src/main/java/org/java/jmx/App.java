@@ -22,6 +22,14 @@ Accumulating statistics about application behavior and making them available
 Notifying of state changes and erroneous conditions.
  *
  */
+
+/**
+ * This Agent is started by the VM when -Dcom.sun.management.snmp or
+ * -Dcom.sun.management.jmxremote is set. This class will be loaded by the
+ * system class loader. Also jmx framework could be started by jcmd
+ * 
+ * 查看 jre\lib\management-agent.jar
+ */
 public class App 
 {
     public static void main( String[] args )throws Exception
