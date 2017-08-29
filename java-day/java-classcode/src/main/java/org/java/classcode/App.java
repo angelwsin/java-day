@@ -39,5 +39,10 @@ public class App
          *  "boolean", "char", "float", "double", "byte", "short", "int", "long", "object", "array", "void",
          * 
          */
+        
+        
+        // instance 验证对象是不是它的子类
+       // App.class.isAssignableFrom(cls) 验证类是不是它的子类
+        
     }
 }

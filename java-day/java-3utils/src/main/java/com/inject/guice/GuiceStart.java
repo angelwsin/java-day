@@ -14,6 +14,11 @@ public class GuiceStart {
         
          UserService userService  = inject.getInstance(UserService.class);
          userService.say();
+         
+         LoginService loginService = inject.getInstance(LoginService.class);
+         loginService.say();
+         
+        
     }
 
 }
