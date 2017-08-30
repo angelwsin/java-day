@@ -15,7 +15,7 @@
        update command set cmdStatus=#{cmdStatus}, retry=#{retry} where id=#{id} 
     </update> 
      
-    <select id="cmdList" parameterType="int" resultType="com.service.schedule.Command">  
+    <select id="cmdList" parameterType="string" resultType="com.service.schedule.Command">  
        select * from command where cmdStatus=#{cmdStatus} 
     </select>
      
