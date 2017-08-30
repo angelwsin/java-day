@@ -3,9 +3,10 @@ package org.java.security;
 import java.security.AlgorithmParameterGenerator;
 import java.security.AlgorithmParameterGeneratorSpi;
 import java.security.KeyStore;
-import java.security.cert.CertificateFactory;
+import java.util.Base64;
+import java.util.Base64.Encoder;
 
-import javax.net.ssl.KeyManager;
+import javax.crypto.Cipher;
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLEngine;
@@ -13,6 +14,10 @@ import javax.net.ssl.TrustManagerFactory;
 
 import sun.security.jca.GetInstance;
 
+
+//http://docs.oracle.com/javase/8/docs/technotes/guides/security/SunProviders.html#Introduction
+
+//http://hubingforever.blog.163.com/blog/static/17104057920118981219705/
 public class SecurityAlgorithm {
     
     /// built in knowledge of the engine types shipped as part of the JDK
@@ -100,6 +105,13 @@ public class SecurityAlgorithm {
         ssLContext.init(factory.getKeyManagers(), trustManager.getTrustManagers(), null);
         
         SSLEngine  engine =  ssLContext.createSSLEngine();
+        
+        
+        
+        Cipher cipher =  Cipher.getInstance("AES");
+        
+       
+        
         
         
         

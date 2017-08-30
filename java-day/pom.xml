@@ -56,5 +56,6 @@
     <module>java-cache</module>
     <module>java-logs</module>
     <module>java-net</module>
+    <module>java-serialize</module>
   </modules>
 </project>
