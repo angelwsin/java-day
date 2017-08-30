@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+   
+<mapper namespace="com.service.schedule.cmd.CommandMapper">  
+    
+      
+    
+    <insert id="insertCmd" parameterType="com.service.schedule.Command" useGeneratedKeys="true" keyColumn="id">  
+       insert into command(cmdType, retry,content,cmdStatus) values(#{cmdType}, #{retry},#{content},#{cmdStatus})
+    </insert>
+     
+    <update id="updateCmd" parameterType="com.service.schedule.Command">  
+       update command set cmdStatus=#{cmdStatus}, retry=#{retry} where id=#{id} 
+    </update> 
+     
+    <select id="cmdList" parameterType="int" resultType="com.service.schedule.Command">  
+       select * from command where cmdStatus=#{cmdStatus} 
+    </select>
+     
+  
+</mapper>
