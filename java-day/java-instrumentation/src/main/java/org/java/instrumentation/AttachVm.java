@@ -13,6 +13,7 @@ public class AttachVm {
         RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();
         VirtualMachine vm = VirtualMachine.attach(runtimeMXBean.getName().split("@")[0]);
          vm.loadAgent("org.java.instrumentation.Angent");
+         
          vm.detach();
        
     }

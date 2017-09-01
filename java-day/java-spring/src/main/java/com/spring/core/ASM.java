@@ -8,7 +8,7 @@ import org.springframework.core.type.classreading.CachingMetadataReaderFactory;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.classreading.MetadataReaderFactory;
 
-public class ASMClass {
+public class ASM {
     
     
     static final String DEFAULT_RESOURCE_PATTERN = "**/*.class";

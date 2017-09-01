@@ -6,6 +6,7 @@
 <mapper namespace="com.service.schedule.cmd.CommandMapper">  
     
       
+      
     
     <insert id="insertCmd" parameterType="com.service.schedule.Command" useGeneratedKeys="true" keyColumn="id">  
        insert into command(cmdType, retry,content,cmdStatus) values(#{cmdType}, #{retry},#{content},#{cmdStatus})
@@ -17,7 +18,9 @@
      
     <select id="cmdList" parameterType="string" resultType="com.service.schedule.Command">  
        select * from command where cmdStatus=#{cmdStatus} 
+       
     </select>
+     
      
   
 </mapper>

@@ -7,6 +7,7 @@ import com.service.schedule.Command;
 public interface CommandMapper {
     
     
+    
      public  void updateCmd(Command command);
      
      
