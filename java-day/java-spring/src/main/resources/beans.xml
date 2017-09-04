@@ -69,5 +69,25 @@
                </bean>
              </property>
      </bean>
+     
+     <tx:advice id="TX" transaction-manager="transactionManager">
+        <tx:attributes>
+          <tx:method name="" />
+          
+        </tx:attributes>
+        
+     </tx:advice>
+     
+     <aop:config  >
+       <aop:pointcut expression="" id=""  />
        
+       <aop:pointcut expression="" id=""/>
+       
+       <aop:advisor advice-ref="" pointcut=""/>
+     </aop:config>
+     
+    
+     
+       
+    
 </beans>
