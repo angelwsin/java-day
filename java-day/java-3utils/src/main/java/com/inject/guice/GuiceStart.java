@@ -4,6 +4,32 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 public class GuiceStart {
+    /*
+    InternalInjectorCreator
+    
+    --InjectionRequestProcessor
+       --Initializer
+    --ProcessedBindingData
+
+    --InjectorShell.Builder
+      --Modules
+      --elements
+        --Binding
+
+    --InjectorShell
+
+
+
+   RecordingBinder Binder
+     --modules
+       --ModuleInfo
+     --elements
+     --moduleSource
+       --module
+
+    module.configure
+
+         Binding*/
     
     
     
@@ -17,6 +43,7 @@ public class GuiceStart {
          
          LoginService loginService = inject.getInstance(LoginService.class);
          loginService.say();
+        
          
         
     }
