@@ -57,5 +57,6 @@
     <module>java-logs</module>
     <module>java-net</module>
     <module>java-serialize</module>
+    <module>java-distribute-componet</module>
   </modules>
 </project>
