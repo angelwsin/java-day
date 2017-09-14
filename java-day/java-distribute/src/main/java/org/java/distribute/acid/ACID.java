@@ -3,6 +3,8 @@ package org.java.distribute.acid;
 //http://www.cnblogs.com/nongchaoer/p/6476539.html
 //http://blog.csdn.net/followmyinclinations/article/details/52870418
 //http://jm.taobao.org/2012/11/19/mass-storage-16/
+//http://www.cnblogs.com/hapjin/p/4748603.html
+//http://blog.csdn.net/sparkliang/article/details/5740882
 public class ACID {
     
     /**
@@ -57,14 +59,14 @@ public class ACID {
      *   2.数据不一致(脑裂)
      *   
      *   
-     *   quorum机制-- 防止脑裂
-     *   少数服从多数
-     *   
-     *   Paxos有没有什么值得改进的地方：
-     *   如果在一个决议提议的过程中，其他决议会被否决，否决本身意味着更多的网络io，意味着更多的冲突，这些冲突都是需要额外的开销的，代价很大很大
+    
      *   
      *   
-     *   zab的改进 使用 领导者 实现  领导者处理所有的请求
+     *  2pc/3pc  http://www.cnblogs.com/bangerlee/p/5268485.html
+     *   
+     *   讨论分布式系统理论和工程实践的时候，必先划定模型。例如有以下两种模型：
+     *   异步环境(asynchronous)下，节点宕机(fail-stop)
+                          异步环境(asynchronous)下，节点宕机恢复(fail-recover)、网络分化(network partition)
      *   
      *   
      *  
@@ -91,7 +93,28 @@ public class ACID {
      *    
      *         角色                                               原理          第一阶段                                                                             第二阶段                                                                第三阶段                      缺点
      *                  
-     *  3pc   参与者，协调者                               投票         预提交(redolog,undolog)           prepare(canCommit)       提交阶段                     脑裂，单点
+     *  3pc   参与者，协调者                               投票         prepare(canCommit)             预提交(redolog,undolog)     提交阶段                     脑裂，单点
+     *  
+     *  
+     *  
+     *  Paxos
+     *   quorum机制-- 防止脑裂
+     *   少数服从多数
+     *   
+     *   Paxos有没有什么值得改进的地方：
+     *   如果在一个决议提议的过程中，其他决议会被否决，否决本身意味着更多的网络io，意味着更多的冲突，这些冲突都是需要额外的开销的，代价很大很大
+     *   
+     *   
+     *   zab的改进 使用 领导者 实现  领导者处理所有的请求
+     *   
+     *   选取领导者的算法: 面包店算法 (Lamport时钟)
+     *   
+     *   
+     *   
+     *   zab协议，如果我们用在google 全球数据库spanner上，会不会有什么问题呢？
+     *  
+     *  
+     *  
      *    
      *    
      *  
@@ -105,6 +128,14 @@ public class ACID {
      *  
      *  
      *  
+     *  
+     *  
+     *  
+     *  http://www.cnblogs.com/bangerlee/p/5448766.html
+     *  
+     *  一致性协议实现包含以下
+     *  (Leader、quorum、state machine)
+     *  状态机按相同顺序执行指令,得出相同结果、状态一致
      *  
      */
     
