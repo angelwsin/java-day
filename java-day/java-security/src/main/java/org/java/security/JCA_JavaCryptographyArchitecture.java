@@ -5,14 +5,17 @@ import java.security.AccessController;
 import java.security.PrivilegedAction;
 
 /**
+ * http://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html
  *Permissions fall into these categories: File, Socket, Net,
  * Security, Runtime, Property, AWT, Reflect, and Serializable
  * 
  * java command are by default not run with a SecurityManager installed
  * 1.setSecurityManager method
  * 2.-Djava.security.manager
+ * 
+ * http://www.cnblogs.com/yiwangzhibujian/p/6207212.html
  */
-public class App 
+public class JCA_JavaCryptographyArchitecture 
 {
     public static void main( String[] args )
     {

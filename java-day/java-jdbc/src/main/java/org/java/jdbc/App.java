@@ -30,12 +30,12 @@ public class App
             e.printStackTrace();
         }*/
         
-         DriverManager.registerDriver(new Driver());
+        /* DriverManager.registerDriver(new Driver());
          Connection conn  =  DriverManager.getConnection(url, user, password);
          conn.setAutoCommit(false);
          Statement  stat = conn.createStatement();
          ResultSet result = stat.executeQuery(sql);
-         conn.commit();
+         conn.commit();*/
         DataSource  dataSource = new DruidDataSource();
     }
 }
