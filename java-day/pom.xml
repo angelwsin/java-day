@@ -58,5 +58,6 @@
     <module>java-net</module>
     <module>java-serialize</module>
     <module>java-distribute-componet</module>
+    <module>java-io-nio-aio</module>
   </modules>
 </project>

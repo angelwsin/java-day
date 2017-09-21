@@ -8,9 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>java-day</groupId>
-  <artifactId>java-3utils</artifactId>
+  <artifactId>java-io-nio-aio</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>java-3utils</name>
+  <name>java-io-nio-aio</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,24 +22,5 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<dependency>
-    <groupId>com.google.guava</groupId>
-    <artifactId>guava</artifactId>
-    <version>22.0</version>
-</dependency>
-
-<dependency>
-    <groupId>com.google.inject</groupId>
-    <artifactId>guice</artifactId>
-    <version>4.0</version>
-</dependency>
-
-<dependency>
-    <groupId>io.reactivex.rxjava2</groupId>
-    <artifactId>rxjava</artifactId>
-    <version>2.1.2</version>
-</dependency>
-
-    
   </dependencies>
 </project>

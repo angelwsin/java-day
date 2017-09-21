@@ -62,6 +62,11 @@ public class Server {
         
         Iterator<SelectionKey>  it = keys.iterator();
         
+        SelectionKey selectiong = it.next();
+        
+        
+        
+        
         
         
     }
