@@ -8,6 +8,11 @@ package org.java.distribute.acid;
 public class ACID {
     
     /**
+     * 分布式问题:
+     * 机器挂掉
+     * 网络(脑裂)
+     * 
+     * 
      * 分布式 下的acid
      * 
      * 理论:
