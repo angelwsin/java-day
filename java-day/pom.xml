@@ -60,5 +60,7 @@
     <module>java-distribute-componet</module>
     <module>java-io-nio-aio</module>
     <module>java-jdo-jpa</module>
+    <module>java-jar</module>
+    <module>java-zip</module>
   </modules>
 </project>
