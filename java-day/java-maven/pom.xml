@@ -15,6 +15,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -40,6 +41,26 @@
 </dependency>
     
   </dependencies>
+   <build>
+    <plugins>
+     <plugin>
+       <groupId>java-day</groupId>
+       <artifactId>java-maven-plugins-dev</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <executions>
+      <execution>
+      <id>sayZhansan</id>
+        <configuration>
+         <userName>zhangsan</userName>
+       </configuration>
+       <goals>
+        <goal>greeting</goal>
+       </goals>
+      </execution>
+      </executions>
+     </plugin>
+    </plugins>
+   </build>
   
 
 </project>
