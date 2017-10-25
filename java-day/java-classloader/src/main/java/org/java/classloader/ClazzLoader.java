@@ -34,5 +34,27 @@ public class ClazzLoader {
             System.out.println(url.getFile());
         }
     }
+    
+    
+    
+    /**
+     * 类加载过程
+     * 
+     *  .java  文件 编译成 .class文件
+     *  
+     *  jvm启动 设置加载路径
+     *  
+     *  设置方式:
+     *    1.java  -D
+     *  
+     *  1.根类加载器的路径
+     *  2.扩展类加载器的路径
+     *  3.应用程序类加载器
+     *  
+     * 
+     * 
+     * 
+     * 
+     */
 
 }
