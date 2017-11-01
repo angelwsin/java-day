@@ -33,6 +33,8 @@ public class ClazzLoader {
         for(URL url : app.getURLs()){
             System.out.println(url.getFile());
         }
+        
+        
     }
     
     
