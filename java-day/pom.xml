@@ -65,5 +65,6 @@
     <module>java-ref</module>
     <module>java-maven</module>
     <module>java-maven-plugins-dev</module>
+    <module>java-stream</module>
   </modules>
 </project>
