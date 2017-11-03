@@ -22,5 +22,8 @@ public class Characterx {
 		*/
 		System.out.println(Character.digit('a', 16));
 		
+	   //一切从字符说起
+		//java Unicode字符  Character 用来标示
+		
 	}
 }
