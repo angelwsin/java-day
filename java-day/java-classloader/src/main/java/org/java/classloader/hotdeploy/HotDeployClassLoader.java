@@ -45,7 +45,6 @@ public class HotDeployClassLoader extends ClassLoader{
         Class<?> xclass = classLoader.loadClass("org.java.service.Service");
         System.out.println(xclass);
         
-       
          
     }
   

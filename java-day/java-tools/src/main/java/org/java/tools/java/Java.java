@@ -20,6 +20,10 @@ public class Java {
     	
     	//java [-options] class [args...]
     	
+    	/*java [options] classname [args]
+
+    	  java [options] -jar filename [args]*/
+    	
     	
     	//-options
     	
@@ -102,6 +106,56 @@ public class Java {
 
     	  // defined on Windows
     	  "OS", "PROCESSOR_IDENTIFIER", "_ALT_JAVA_HOME_DIR",*/
+    	
+    	
+    	//-options
+    	
+    	/*
+    	 * 一. Java Runtime Environment (JRE)
+    	 * The JRE searches for the startup class (and other classes used by the application) in three sets of locations:
+    	 *              the bootstrap class path, the installed extensions, and the user's class path.
+    	 *  1)bootstrap class path
+    	 *  2)installed extensions
+    	 *  3)user's class path
+    	 *  
+    	 * 二.Options
+    	 * 1.Standard Options
+    	 *   -agentlib:libname[=options]
+    	 *    Loads the specified native agent library,location specified by the PATH system variable
+    	 *    如:Java Platform Debugger Architecture 调试,-agentlib:jdwp=transport=dt_socket,server=y,address=8000   
+    	 *       instrument  java代理 实现 这个命令的-javaagent:jarpath[=options]
+    	 *   -agentpath:pathname[=options]
+    	 *    Loads the native agent library specified by the absolute path name
+    	 *   -client
+    	 *    Selects the Java HotSpot Client VM. The 64-bit version of the Java SE Development Kit (JDK) currently ignores this option and instead uses the Server JVM
+    	 *    
+    	 *   -Dproperty=value
+    	 *    Sets a system property value. The property variable is a string with no spaces that represents the name of the property. 
+    	 *    The value variable is a string that represents the value of the property. 
+    	 *    If value is a string with spaces, then enclose it in quotation marks (for example -Dfoo="foo bar")
+    	 *   -jar filename
+    	 *    Executes a program encapsulated in a JAR file. The filename argument is the name of a JAR file with a manifest that contains 
+    	 *    a line in the form Main-Class:classname that defines the class with the public static void main(String[] args) method that serves as your application's 
+    	 *    starting point.When you use the -jar option, the specified JAR file is the source of all user classes, and other class path settings are ignored.
+    	 *   -javaagent:jarpath[=options]
+    	 *    Loads the specified Java programming language agent. For more information about instrumenting Java applications, see the java.lang.instrument package 
+    	 *   -server
+    	 *    Selects the Java HotSpot Server VM. The 64-bit version of the JDK supports only the Server VM, so in that case the option is implicit.
+         *   -verbose:class
+         *    Displays information about each loaded class.
+         * 2.Non-Standard Options 
+         *   -X  Displays help for all available -X options.
+    	 *    
+    	 *    
+    	 *    
+    	 */
+    	
+    	//加载 nativelib
+    	System.loadLibrary("libname");
+    	
+    	//-Dproperty=value  从以下取值
+    	System.getProperty("property");
+    	
     	
     	
     	
