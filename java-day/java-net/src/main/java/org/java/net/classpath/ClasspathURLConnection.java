@@ -23,5 +23,10 @@ public class ClasspathURLConnection extends URLConnection{
 		String path = getURL().getPath();
 		return Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
 	}
+	
+	//java.net.URLConnection.getContentHandler() 可以查看contentHandler
+	
+	//contentClassPrefix = "sun.net.www.content";  text/html --> text.html
+	//contentPathProp = "java.content.handler.pkgs";
 
 }
