@@ -8,9 +8,16 @@ import java.beans.IndexedPropertyDescriptor;
 import java.beans.Introspector;
 import java.beans.MethodDescriptor;
 import java.beans.ParameterDescriptor;
-import java.beans.PropertyDescriptor;
 import java.beans.Statement;
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.lang.reflect.Method;
+
+import javax.swing.JButton;
 
 import org.java.beans.editor.IntegerPrppertyEditor;
 
@@ -67,6 +74,7 @@ public class App
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         Beans.instantiate(classLoader, UserBean.class.getName());
         
+        //Introspector  可以看做beanInfo的容器
         BeanInfo userInfox =   Introspector.getBeanInfo(UserBean.class);
         
         
@@ -85,6 +93,16 @@ public class App
         //VetoableChangeListener  有能力拒绝属性修改监听 
         
         //具体使用 看 MyBean 
+        
+        // beans 和xml 的转换
+        
+		XMLEncoder e = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("Test.xml")));
+		e.writeObject(new JButton("Hello, world"));
+		e.close();
+		
+		XMLDecoder d = new XMLDecoder(new BufferedInputStream(new FileInputStream("Test.xml")));
+		Object result = d.readObject();
+		d.close();
         
     }
 }

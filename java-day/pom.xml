@@ -66,5 +66,6 @@
     <module>java-maven</module>
     <module>java-maven-plugins-dev</module>
     <module>java-stream</module>
+    <module>java-biz</module>
   </modules>
 </project>

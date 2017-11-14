@@ -11,7 +11,7 @@ public class HelloUDPClient {
 		InetSocketAddress bindaddr = new InetSocketAddress("localhost", 1098);
 		DatagramSocket client = new DatagramSocket();
 		client.connect(bindaddr);
-		byte[] str = "hello".getBytes();
+		byte[] str = "hello world".getBytes();
 		DatagramPacket hello = new DatagramPacket(str, str.length);
 		client.send(hello);
 		

@@ -2,6 +2,12 @@ package org.java.tools.java;
 
 import java.util.Map;
 
+
+//jvm 创建成功 Threads::create_vm
+//初始化  init_globals
+// ClassLoader::initialize() 类加载初始化   加载根类加载器路径
+// Launcher 中初始化  ext,app 扩展类，应用程序类加载器
+// ext,app 类加载器继承URLClassLoader  加载的路径保存在 urlclasspath
 public class Java {
     
     
@@ -17,6 +23,7 @@ public class Java {
     	System.out.println(System.getProperty("sun.java.command"));
     	System.out.println(System.getProperty("java.vm.name"));
     	System.out.println(System.getProperty("sun.boot.library.path"));
+    	System.out.println(System.getProperty("sun.java.launcher"));
     	
     	//java [-options] class [args...]
     	
@@ -155,7 +162,6 @@ public class Java {
     	
     	//-Dproperty=value  从以下取值
     	System.getProperty("property");
-    	
     	
     	
     	
