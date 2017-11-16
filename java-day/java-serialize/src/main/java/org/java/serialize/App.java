@@ -19,8 +19,13 @@ public class App
         user.setUserName("zhangsan");
         output.writeObject(user);
         
-        
-        
+       byte[] x =  out.toByteArray();
+       for(byte b : x){
+    	  System.out.println(Integer.toHexString(Byte.toUnsignedInt(b)));//  8421
+       }
+       
+       //java 的序列化协议
+       //开头 魔数版本..........结束标志
         //java  serialize
         
         //接口 serializable

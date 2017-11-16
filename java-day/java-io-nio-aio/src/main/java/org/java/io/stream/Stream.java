@@ -6,12 +6,14 @@ import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.io.PushbackInputStream;
 import java.io.SequenceInputStream;
 import java.net.URL;
+
+import javax.crypto.Cipher;
+import javax.crypto.CipherOutputStream;
 
 //字节流   计算机存储的都是字节流
 //字符流    看到的字符流
@@ -61,6 +63,11 @@ public class Stream {
 		   //输出流
 		   //文件输出流
 		   FileOutputStream fileOutputStream  = new FileOutputStream(file);
+		   
+		   
+		   //秘钥
+		   Cipher ci  =  Cipher.getInstance("AES");
+		   CipherOutputStream cipher  = new CipherOutputStream(fileOutputStream, ci);
 		   
 		   
 		   

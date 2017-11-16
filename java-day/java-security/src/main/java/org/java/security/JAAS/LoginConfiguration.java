@@ -1,4 +1,4 @@
-package org.java.security;
+package org.java.security.JAAS;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package org.java.security;
+package org.java.security.JAAS;
 
 import javax.security.auth.Subject;
 import javax.security.auth.login.LoginContext;
@@ -9,6 +9,8 @@ public class JAAS_JavaAuthenticationAndAuthorizationService {
 
     
     /*
+     * 认证(authentication) 和授权 (authorization)
+     * Java Authentication and Authorization Service (JAAS) 
     JAAS can be used for two purposes:
 
         for authentication of users, to reliably and securely determine who is currently executing Java code, regardless of whether the code is running as an application, an applet, a bean, or a servlet; and
