@@ -11,3 +11,8 @@ package org.java.security.JGSS_API;
 public class Kerberos {
 
 }
+
+
+
+/*SPNEGO(SPNEGO: Simple and Protected GSS-API Negotiation)是微软提供的一种使用GSS-API认证机制的安全协议，
+用于使Webserver共享Windows Credentials，它扩展了Kerberos(一种网络认证协议)。*/

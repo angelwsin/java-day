@@ -1,5 +1,8 @@
 package org.java.security.cryptography;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.security.Key;
 import java.security.KeyFactory;
 import java.security.KeyPair;
@@ -18,9 +21,7 @@ import javax.crypto.KeyGenerator;
 
 import sun.security.x509.AlgorithmId;
 import sun.security.x509.CertificateAlgorithmId;
-import sun.security.x509.CertificateIssuerName;
 import sun.security.x509.CertificateSerialNumber;
-import sun.security.x509.CertificateSubjectName;
 import sun.security.x509.CertificateValidity;
 import sun.security.x509.CertificateVersion;
 import sun.security.x509.CertificateX509Key;
@@ -94,6 +95,7 @@ public class Cryptography {
         key：公钥 
         issuer：签发者 
         */
+        //X509就是数字证书的标准
         //CertAndKeyGen certAndKeyGen = new CertAndKeyGen("RSA", "MD5withRSA");
        // certAndKeyGen.getSelfCertificate(arg0, arg1, arg2)  查看此方法可以看到 keytool中证书的生成
         String name = "CN=country,ST=state,L=Locality,OU=OrganizationUnit,O=Organization"; 
@@ -103,15 +105,24 @@ public class Cryptography {
         x509.set(X509CertInfo.SERIAL_NUMBER, new CertificateSerialNumber((int) (System.currentTimeMillis() / 1000L))); 
         AlgorithmId algID = AlgorithmId.get("MD5WithRSA"); 
         x509.set(X509CertInfo.ALGORITHM_ID, new CertificateAlgorithmId(algID));  
-        x509.set(X509CertInfo.SUBJECT, new CertificateSubjectName(x500Name));  
+        x509.set(X509CertInfo.SUBJECT, x500Name);  
         x509.set(X509CertInfo.KEY, new CertificateX509Key(keyP.getPublic()));  
         CertificateValidity interval = new CertificateValidity(new Date(), new Date(System.currentTimeMillis() + 365000000000L));  
         x509.set(X509CertInfo.VALIDITY, interval);  
         x509.set(X509CertInfo.ISSUER, x500Name);  
         X509CertImpl x509CertImpl = new X509CertImpl(x509);  
         x509CertImpl.sign(keyP.getPrivate(), "MD5WithRSA");  
-        //Certificate cert = certFactory.generateCertificate(is);
+        File certx = new File(System.getProperty("user.dir")+"/certx");
+        x509CertImpl.encode(new FileOutputStream(certx));
         
+        //加载证书
+        Certificate cerx =  certFactory.generateCertificate(new FileInputStream(certx));
+        System.out.println(cerx.getPublicKey());
+        
+        
+        
+        
+    
         
 	}
 	
