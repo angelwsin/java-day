@@ -49,4 +49,14 @@ public class Klass extends Metadata{
     
    // find_method_index    使用二分查找  binary_search
 
+	
+	// Class name.  Instance classes: java/lang/String, etc.  Array classes: [I,
+	  // [Ljava/lang/String;, etc.  Set to zero for all other kinds of classes.
+	  String     _name;
+
+	public String name() {
+		return _name;
+	}
+	  
+	  
 }
