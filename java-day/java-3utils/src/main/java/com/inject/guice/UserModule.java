@@ -3,6 +3,8 @@ package com.inject.guice;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Scopes;
+import com.google.inject.multibindings.MapBinder;
+import com.google.inject.multibindings.Multibinder;
 
 
 /*Module依赖注册
@@ -25,6 +27,12 @@ public class UserModule extends AbstractModule{
        bind(UserService.class).to(UserServiceImpl.class).in(Scopes.SINGLETON);
        //bind(UserService.class).toProvider(providerType)
        bind(LoginService.class).in(Scopes.SINGLETON);
+       
+       MapBinder<String,UserService> map =   MapBinder.newMapBinder(binder(), String.class, UserService.class);
+       //map.addBinding("").to
+       
+       Multibinder<UserService> user =  Multibinder.newSetBinder(binder(), UserService.class);
+       //user.addBinding().to(implementation)
        
     }
     

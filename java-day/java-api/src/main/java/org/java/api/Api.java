@@ -50,6 +50,23 @@ public class Api {
           * 
           * 
           */
+    	//动态加载native lib
+    	//路径java.library.path
+    	/*Linux环境
+
+    	系统变量LD_LIBRARY_PATH来添加java.library.path
+
+    	Windows
+
+    	在系统->高级系统设置->环境变量里，在path变量里添加。
+
+    	Eclipse
+
+    	在Properties -> Run/Debug settings -> Arguments->VM arguments里添加：
+
+    	-Djava.library.path=/home/abc/workspace/
+    	*/
+    	System.loadLibrary("nativelib");
     }
 
 }
