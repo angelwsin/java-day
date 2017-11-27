@@ -41,6 +41,18 @@ public class App
         
         
         
+    	/**
+    	 * 
+    	 * JVMTI Env
+    	 * JNI
+    	 * JPLISAgent    Java programming language Agents
+    	 * 
+    	 * 
+    	 * JNI
+    	 * 
+    	 * JNIEnv_结构 封装了 JNINativeInterface_(jni functions)
+    	 * 
+    	 */
         
         
         

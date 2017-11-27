@@ -11,6 +11,7 @@ import java.io.PipedOutputStream;
 import java.io.PushbackInputStream;
 import java.io.SequenceInputStream;
 import java.net.URL;
+import java.util.zip.ZipOutputStream;
 
 import javax.crypto.Cipher;
 import javax.crypto.CipherOutputStream;
@@ -58,6 +59,12 @@ public class Stream {
 		   pushbackInputStream.read(bx);
 		   System.out.println(new String(bx));
 		   
+		   //CipherInputStream  
+		   //  DeflaterInputStream, InflaterInputStream  压缩，解压
+		   
+		   //InflaterInputStream 解压
+		   //GZIPInputStream, ZipInputStream
+		   //DigestInputStream
 		   
 		   
 		   //输出流
@@ -68,6 +75,14 @@ public class Stream {
 		   //秘钥
 		   Cipher ci  =  Cipher.getInstance("AES");
 		   CipherOutputStream cipher  = new CipherOutputStream(fileOutputStream, ci);
+		   
+		   //Deflater 压缩  当数据量大可以压缩，减少带宽的占用
+		   //GZIPOutputStream, ZipOutputStream
+		   File zipFile = new File(System.getProperty("user.dir")+"/out.zip");
+		   ZipOutputStream zipOutPutStream = new ZipOutputStream(new FileOutputStream(zipFile));
+		   
+		   
+		   
 		   
 		   
 		   
