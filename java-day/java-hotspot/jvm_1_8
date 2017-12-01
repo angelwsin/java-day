@@ -1,0 +1,33 @@
+
+Metaspace
+   Metadata
+    ConstantPool
+    Klass
+     ArrayKlass
+     InstanceKlass
+    Method
+    MethodData
+    
+ 
+oopDesc  代表对象
+ 
+
+type
+
+UnknownType, \
+  ClassType, \
+  SymbolType, \
+  TypeArrayU1Type, \
+  TypeArrayU2Type, \
+  TypeArrayU4Type, \
+  TypeArrayU8Type, \
+  TypeArrayOtherType, \
+  MethodType, \
+  ConstMethodType, \
+  MethodDataType, \
+  ConstantPoolType, \
+  ConstantPoolCacheType, \
+  AnnotationType, \
+  MethodCountersType, \
+  DeallocatedType,
+  _number_of_types

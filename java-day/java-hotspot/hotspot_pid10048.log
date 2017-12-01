@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='10048' time_ms='1512112743225'>
+<vm_version>
+<name>
+Java HotSpot(TM) 64-Bit Server VM
+</name>
+<release>
+25.131-b11
+</release>
+<info>
+Java HotSpot(TM) 64-Bit Server VM (25.131-b11) for windows-amd64 JRE (1.8.0_131-b11), built on Mar 15 2017 01:23:53 by &quot;java_re&quot; with MS VC++ 10.0 (VS2010)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-XX:+UnlockDiagnosticVMOptions -XX:CompileThreshold=100 -XX:+LogCompilation -XX:+PrintCompilation -Dfile.encoding=UTF-8 
+</args>
+<command>
+org.java.hotspot.App
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.131-b11
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=D:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+java.endorsed.dirs=D:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed
+sun.boot.library.path=D:\Program Files\Java\jdk1.8.0_131\jre\bin
+java.library.path=D:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;D:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;D:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Program Files\Java\jdk1.8.0_131\bin;D:\Program Files (x86)\scala\bin;D:\apache-maven-3.5.0\bin;C:\Program Files (x86)\Heimdal\bin\;D:\Program Files\Heimdal\bin\;D:\eclipse;;.
+java.home=D:\Program Files\Java\jdk1.8.0_131\jre
+java.class.path=D:\git\java-day\java-day\java-hotspot\target\classes
+sun.boot.class.path=D:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;D:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;D:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;D:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.8.0_131\jre\classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+file.encoding=UTF-8
+sun.java.command=org.java.hotspot.App
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='7196'/>
+<thread_logfile thread='7196' filename='C:\Users\ADMINI~1\AppData\Local\Temp\\hs_c7196_pid10048.log'/>
+<writer thread='7408'/>
+<thread_logfile thread='7408' filename='C:\Users\ADMINI~1\AppData\Local\Temp\\hs_c7408_pid10048.log'/>
+<writer thread='9476'/>
+<thread_logfile thread='9476' filename='C:\Users\ADMINI~1\AppData\Local\Temp\\hs_c9476_pid10048.log'/>
+<blob name='MethodHandlesAdapterBlob' size='32000'>
+<sect index='1' size='32000' free='31636'/>
+</blob>
+<writer thread='1388'/>
+<task_queued compile_id='1' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='256' backedge_count='1184' iicount='256' level='3' stamp='0.056' comment='tiered' hot_count='256'/>
+<writer thread='7196'/>
+     56    1       3       java.lang.String::equals (81 bytes)
+<nmethod compile_id='1' compiler='C1' level='3' entry='0x0000000002a70720' size='2184' address='0x0000000002a70590' relocation_offset='288' insts_offset='400' stub_offset='1616' scopes_data_offset='1768' scopes_pcs_offset='1968' dependencies_offset='2144' nul_chk_table_offset='2152' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='270' backedge_count='1308' iicount='270' stamp='0.057'/>
+<writer thread='1388'/>
+<task_queued compile_id='2' method='java/lang/String indexOf (II)I' bytes='70' count='125' backedge_count='3072' iicount='125' level='3' stamp='0.058' comment='tiered' hot_count='125'/>
+<writer thread='7196'/>
+     57    2       3       java.lang.String::indexOf (70 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='3' method='java/lang/String &lt;init&gt; ([CII)V' bytes='82' count='256' iicount='256' level='3' stamp='0.058' comment='tiered' hot_count='256'/>
+<task_queued compile_id='4' method='java/util/Arrays copyOfRange ([CII)[C' bytes='63' count='256' iicount='256' level='3' stamp='0.058' comment='tiered' hot_count='256'/>
+<task_queued compile_id='5' method='java/lang/String hashCode ()I' bytes='55' count='429' backedge_count='6144' iicount='429' level='3' stamp='0.058' comment='tiered' hot_count='429'/>
+<nmethod compile_id='6' compile_kind='c2n' level='0' entry='0x0000000002a72c00' size='912' address='0x0000000002a72a90' relocation_offset='288' consts_offset='912' insts_offset='368' method='java/lang/System arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V' bytes='0' count='896' iicount='896' stamp='0.058'/>
+     57    6     n 0       java.lang.System::arraycopy (native)   (static)
+<task_queued compile_id='7' method='java/lang/Object &lt;init&gt; ()V' bytes='1' count='2432' iicount='2432' level='3' stamp='0.058' comment='tiered' hot_count='2432'/>
+<writer thread='7196'/>
+<nmethod compile_id='2' compiler='C1' level='3' entry='0x0000000002a725a0' size='1592' address='0x0000000002a72410' relocation_offset='288' insts_offset='400' stub_offset='1136' scopes_data_offset='1312' scopes_pcs_offset='1440' dependencies_offset='1568' nul_chk_table_offset='1576' method='java/lang/String indexOf (II)I' bytes='70' count='315' backedge_count='7465' iicount='315' stamp='0.058'/>
+     58    5       3       java.lang.String::hashCode (55 bytes)
+<nmethod compile_id='5' compiler='C1' level='3' entry='0x0000000002a72080' size='1224' address='0x0000000002a71f10' relocation_offset='288' insts_offset='368' stub_offset='880' scopes_data_offset='1032' scopes_pcs_offset='1104' dependencies_offset='1200' nul_chk_table_offset='1208' method='java/lang/String hashCode ()I' bytes='55' count='459' backedge_count='6491' iicount='459' stamp='0.058'/>
+     58    7       3       java.lang.Object::&lt;init&gt; (1 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='8' method='java/util/TreeMap parentOf (Ljava/util/TreeMap$Entry;)Ljava/util/TreeMap$Entry;' bytes='13' count='9984' iicount='9984' stamp='0.058' comment='tiered' hot_count='9984'/>
+<task_queued compile_id='9' method='java/lang/Math min (II)I' bytes='11' count='512' iicount='512' level='3' stamp='0.058' comment='tiered' hot_count='512'/>
+<writer thread='9476'/>
+     58    8       4       java.util.TreeMap::parentOf (13 bytes)
+<writer thread='7196'/>
+<nmethod compile_id='7' compiler='C1' level='3' entry='0x0000000002a71d20' size='776' address='0x0000000002a71bd0' relocation_offset='288' insts_offset='336' stub_offset='528' scopes_data_offset='680' scopes_pcs_offset='704' dependencies_offset='768' method='java/lang/Object &lt;init&gt; ()V' bytes='1' count='2499' iicount='2499' stamp='0.059'/>
+<writer thread='1388'/>
+<task_queued compile_id='10' method='java/lang/String charAt (I)C' bytes='29' count='88576' iicount='88576' stamp='0.059' comment='tiered' hot_count='88576'/>
+<task_queued compile_id='11' method='java/lang/String length ()I' bytes='6' count='26240' iicount='26240' stamp='0.059' comment='tiered' hot_count='26240'/>
+<writer thread='7408'/>
+     58   10       4       java.lang.String::charAt (29 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='12' method='java/lang/CharacterData of (I)Ljava/lang/CharacterData;' bytes='120' count='896' iicount='896' level='3' stamp='0.059' comment='tiered' hot_count='896'/>
+<writer thread='7196'/>
+     58    9       3       java.lang.Math::min (11 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='13' method='java/lang/CharacterDataLatin1 getProperties (I)I' bytes='11' count='896' iicount='896' level='3' stamp='0.059' comment='tiered' hot_count='896'/>
+<writer thread='7196'/>
+<nmethod compile_id='9' compiler='C1' level='3' entry='0x0000000002a746e0' size='816' address='0x0000000002a74590' relocation_offset='288' insts_offset='336' stub_offset='592' scopes_data_offset='744' scopes_pcs_offset='760' dependencies_offset='808' method='java/lang/Math min (II)I' bytes='11' count='646' iicount='646' stamp='0.059'/>
+     58   12       3       java.lang.CharacterData::of (120 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='14' method='java/lang/Character toUpperCase (C)C' bytes='6' count='384' iicount='384' level='3' stamp='0.059' comment='tiered' hot_count='384'/>
+<task_queued compile_id='15' method='java/lang/Character toUpperCase (I)I' bytes='9' count='384' iicount='384' level='3' stamp='0.059' comment='tiered' hot_count='384'/>
+<task_queued compile_id='16' method='java/lang/Object &lt;init&gt; ()V' bytes='1' count='2560' iicount='2560' level='1' stamp='0.059' comment='tiered' hot_count='2560'/>
+<writer thread='9476'/>
+<nmethod compile_id='8' compiler='C2' level='4' entry='0x0000000002a71a80' size='488' address='0x0000000002a71950' relocation_offset='288' insts_offset='304' stub_offset='368' scopes_data_offset='400' scopes_pcs_offset='416' dependencies_offset='464' nul_chk_table_offset='472' method='java/util/TreeMap parentOf (Ljava/util/TreeMap$Entry;)Ljava/util/TreeMap$Entry;' bytes='13' count='10263' iicount='10263' stamp='0.059'/>
+     58   11       4       java.lang.String::length (6 bytes)
+<writer thread='7196'/>
+<nmethod compile_id='12' compiler='C1' level='3' entry='0x0000000002a73dc0' size='2408' address='0x0000000002a73c10' relocation_offset='288' insts_offset='432' stub_offset='1680' scopes_data_offset='1832' scopes_pcs_offset='2008' dependencies_offset='2344' nul_chk_table_offset='2352' method='java/lang/CharacterData of (I)Ljava/lang/CharacterData;' bytes='120' count='1191' iicount='1191' stamp='0.059'/>
+     59   16       1       java.lang.Object::&lt;init&gt; (1 bytes)
+<nmethod compile_id='16' compiler='C1' level='1' entry='0x0000000002a73aa0' size='688' address='0x0000000002a73950' relocation_offset='288' insts_offset='336' stub_offset='464' scopes_data_offset='616' scopes_pcs_offset='632' dependencies_offset='680' method='java/lang/Object &lt;init&gt; ()V' bytes='1' count='2568' iicount='2568' stamp='0.059'/>
+<make_not_entrant thread='7196' compile_id='7' compiler='C1' level='3' stamp='0.059'/>
+     59    7       3       java.lang.Object::&lt;init&gt; (1 bytes)   made not entrant
+<writer thread='7408'/>
+<nmethod compile_id='10' compiler='C2' level='4' entry='0x0000000002a737a0' size='720' address='0x0000000002a73650' relocation_offset='288' insts_offset='336' stub_offset='496' scopes_data_offset='528' scopes_pcs_offset='600' dependencies_offset='696' nul_chk_table_offset='704' method='java/lang/String charAt (I)C' bytes='29' count='89563' iicount='89563' stamp='0.059'/>
+<writer thread='7196'/>
+     59   13       3       java.lang.CharacterDataLatin1::getProperties (11 bytes)
+<writer thread='9476'/>
+<nmethod compile_id='11' compiler='C2' level='4' entry='0x0000000002a73580' size='488' address='0x0000000002a73450' relocation_offset='288' insts_offset='304' stub_offset='368' scopes_data_offset='400' scopes_pcs_offset='416' dependencies_offset='464' nul_chk_table_offset='472' method='java/lang/String length ()I' bytes='6' count='26593' iicount='26593' stamp='0.059'/>
+<writer thread='7196'/>
+<nmethod compile_id='13' compiler='C1' level='3' entry='0x0000000002a80be0' size='936' address='0x0000000002a80a90' relocation_offset='288' insts_offset='336' stub_offset='592' scopes_data_offset='744' scopes_pcs_offset='808' dependencies_offset='904' nul_chk_table_offset='912' method='java/lang/CharacterDataLatin1 getProperties (I)I' bytes='11' count='1213' iicount='1213' stamp='0.059'/>
+     59    3       3       java.lang.String::&lt;init&gt; (82 bytes)
+<nmethod compile_id='3' compiler='C1' level='3' entry='0x0000000002a80320' size='2336' address='0x0000000002a80150' relocation_offset='288' insts_offset='464' stub_offset='1520' scopes_data_offset='1752' scopes_pcs_offset='2024' dependencies_offset='2296' nul_chk_table_offset='2304' method='java/lang/String &lt;init&gt; ([CII)V' bytes='82' count='331' iicount='331' stamp='0.060'/>
+     59   14       3       java.lang.Character::toUpperCase (6 bytes)
+<nmethod compile_id='14' compiler='C1' level='3' entry='0x0000000002a7fd80' size='1272' address='0x0000000002a7fc10' relocation_offset='288' insts_offset='368' stub_offset='848' scopes_data_offset='1048' scopes_pcs_offset='1136' dependencies_offset='1248' nul_chk_table_offset='1256' method='java/lang/Character toUpperCase (C)C' bytes='6' count='396' iicount='396' stamp='0.060'/>
+     60   15       3       java.lang.Character::toUpperCase (9 bytes)
+<nmethod compile_id='15' compiler='C1' level='3' entry='0x0000000002a7f700' size='1104' address='0x0000000002a7f590' relocation_offset='288' insts_offset='368' stub_offset='752' scopes_data_offset='944' scopes_pcs_offset='984' dependencies_offset='1080' nul_chk_table_offset='1088' method='java/lang/Character toUpperCase (I)I' bytes='9' count='396' iicount='396' stamp='0.060'/>
+     60    4       3       java.util.Arrays::copyOfRange (63 bytes)
+<nmethod compile_id='4' compiler='C1' level='3' entry='0x0000000002a7e520' size='4672' address='0x0000000002a7e310' relocation_offset='288' insts_offset='528' stub_offset='3120' scopes_data_offset='3440' scopes_pcs_offset='4248' dependencies_offset='4648' nul_chk_table_offset='4656' oops_offset='3368' method='java/util/Arrays copyOfRange ([CII)[C' bytes='63' count='332' iicount='332' stamp='0.061'/>
+<writer thread='1388'/>
+<task_queued compile_id='17' method='java/lang/AbstractStringBuilder ensureCapacityInternal (I)V' bytes='27' count='256' iicount='256' level='3' stamp='0.062' comment='tiered' hot_count='256'/>
+<writer thread='7196'/>
+     61   17       3       java.lang.AbstractStringBuilder::ensureCapacityInternal (27 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='18' method='java/lang/Character toLowerCase (I)I' bytes='9' count='896' iicount='896' level='3' stamp='0.062' comment='tiered' hot_count='896'/>
+<task_queued compile_id='19' method='java/lang/CharacterDataLatin1 toLowerCase (I)I' bytes='39' count='896' iicount='896' level='3' stamp='0.062' comment='tiered' hot_count='896'/>
+<task_queued compile_id='20' method='java/lang/AbstractStringBuilder append (C)Ljava/lang/AbstractStringBuilder;' bytes='29' count='384' iicount='384' level='3' stamp='0.062' comment='tiered' hot_count='384'/>
+<writer thread='7196'/>
+<nmethod compile_id='17' compiler='C1' level='3' entry='0x0000000002a7d8e0' size='1920' address='0x0000000002a7d750' relocation_offset='288' insts_offset='400' stub_offset='1360' scopes_data_offset='1568' scopes_pcs_offset='1752' dependencies_offset='1896' nul_chk_table_offset='1904' method='java/lang/AbstractStringBuilder ensureCapacityInternal (I)V' bytes='27' count='619' iicount='619' stamp='0.062'/>
+     62   18       3       java.lang.Character::toLowerCase (9 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='21' method='java/lang/CharacterDataLatin1 getProperties (I)I' bytes='11' count='1536' iicount='1536' level='1' stamp='0.062' comment='tiered' hot_count='1536'/>
+<writer thread='7196'/>
+<nmethod compile_id='18' compiler='C1' level='3' entry='0x0000000002a7d440' size='1104' address='0x0000000002a7d2d0' relocation_offset='288' insts_offset='368' stub_offset='752' scopes_data_offset='944' scopes_pcs_offset='984' dependencies_offset='1080' nul_chk_table_offset='1088' method='java/lang/Character toLowerCase (I)I' bytes='9' count='1160' iicount='1160' stamp='0.062'/>
+<writer thread='1388'/>
+<task_queued compile_id='22' method='java/lang/StringBuilder append (C)Ljava/lang/StringBuilder;' bytes='8' count='384' iicount='384' level='3' stamp='0.062' comment='tiered' hot_count='384'/>
+<writer thread='7196'/>
+     62   21       1       java.lang.CharacterDataLatin1::getProperties (11 bytes)
+<writer thread='1388'/>
+<task_queued compile_id='23' method='java/io/WinNTFileSystem isSlash (C)Z' bytes='18' count='384' iicount='384' level='3' stamp='0.063' comment='tiered' hot_count='384'/>
+<writer thread='7196'/>
+<nmethod compile_id='21' compiler='C1' level='1' entry='0x0000000002a7d0a0' size='840' address='0x0000000002a7cf50' relocation_offset='288' insts_offset='336' stub_offset='528' scopes_data_offset='680' scopes_pcs_offset='728' dependencies_offset='808' nul_chk_table_offset='816' method='java/lang/CharacterDataLatin1 getProperties (I)I' bytes='11' count='1639' iicount='1639' stamp='0.063'/>
+<make_not_entrant thread='7196' compile_id='13' compiler='C1' level='3' stamp='0.063'/>
+     62   13       3       java.lang.CharacterDataLatin1::getProperties (11 bytes)   made not entrant
+<writer thread='1388'/>
+<task_queued compile_id='24' method='java/lang/StringBuffer append (C)Ljava/lang/StringBuffer;' bytes='13' count='384' iicount='384' level='3' stamp='0.063' comment='tiered' hot_count='384'/>
+<writer thread='7196'/>
+     62   19       3       java.lang.CharacterDataLatin1::toLowerCase (39 bytes)
+<nmethod compile_id='19' compiler='C1' level='3' entry='0x0000000002a80fc0' size='1320' address='0x0000000002a80e50' relocation_offset='288' insts_offset='368' stub_offset='848' scopes_data_offset='1016' scopes_pcs_offset='1176' dependencies_offset='1288' nul_chk_table_offset='1296' method='java/lang/CharacterDataLatin1 toLowerCase (I)I' bytes='39' count='1433' iicount='1433' stamp='0.063'/>
+     63   20       3       java.lang.AbstractStringBuilder::append (29 bytes)
+<nmethod compile_id='20' compiler='C1' level='3' entry='0x0000000002a81540' size='2384' address='0x0000000002a81390' relocation_offset='288' insts_offset='432' stub_offset='1584' scopes_data_offset='1800' scopes_pcs_offset='2136' dependencies_offset='2344' nul_chk_table_offset='2352' method='java/lang/AbstractStringBuilder append (C)Ljava/lang/AbstractStringBuilder;' bytes='29' count='1536' iicount='1536' stamp='0.063'/>
+     63   22       3       java.lang.StringBuilder::append (8 bytes)
+<nmethod compile_id='22' compiler='C1' level='3' entry='0x0000000002a81ec0' size='2664' address='0x0000000002a81d10' relocation_offset='288' insts_offset='432' stub_offset='1680' scopes_data_offset='1904' scopes_pcs_offset='2400' dependencies_offset='2624' nul_chk_table_offset='2632' method='java/lang/StringBuilder append (C)Ljava/lang/StringBuilder;' bytes='8' count='771' iicount='771' stamp='0.064'/>
+     63   23       3       java.io.WinNTFileSystem::isSlash (18 bytes)
+<nmethod compile_id='23' compiler='C1' level='3' entry='0x0000000002a7cce0' size='912' address='0x0000000002a7cb90' relocation_offset='288' insts_offset='336' stub_offset='688' scopes_data_offset='840' scopes_pcs_offset='856' dependencies_offset='904' method='java/io/WinNTFileSystem isSlash (C)Z' bytes='18' count='856' iicount='856' stamp='0.064'/>
+     64   24  s    3       java.lang.StringBuffer::append (13 bytes)
+<nmethod compile_id='24' compiler='C1' level='3' entry='0x0000000002a83140' size='3176' address='0x0000000002a82f90' relocation_offset='288' insts_offset='432' stub_offset='2064' scopes_data_offset='2288' scopes_pcs_offset='2896' dependencies_offset='3136' nul_chk_table_offset='3144' method='java/lang/StringBuffer append (C)Ljava/lang/StringBuffer;' bytes='13' count='765' iicount='765' stamp='0.065'/>
+<writer thread='1388'/>
+<task_queued compile_id='25' method='java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;' bytes='50' count='278' iicount='278' level='3' stamp='0.065' comment='tiered' hot_count='278'/>
+<writer thread='7196'/>
+     64   25       3       java.lang.AbstractStringBuilder::append (50 bytes)
+<nmethod compile_id='25' compiler='C1' level='3' entry='0x0000000002a83de0' size='3056' address='0x0000000002a83c10' relocation_offset='288' insts_offset='464' stub_offset='2096' scopes_data_offset='2352' scopes_pcs_offset='2776' dependencies_offset='3016' nul_chk_table_offset='3024' method='java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;' bytes='50' count='280' iicount='280' stamp='0.065'/>
+<writer thread='1388'/>
+<task_queued compile_id='26' method='java/lang/String indexOf (I)I' bytes='7' count='256' iicount='256' level='3' stamp='0.066' comment='tiered' hot_count='256'/>
+<writer thread='7196'/>
+     65   26       3       java.lang.String::indexOf (7 bytes)
