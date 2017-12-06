@@ -8,6 +8,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Objects;
 
+import org.java.net.classpath.ClasspathURLStreamHandlerFactory;
+
 public class URI_URL_URN {
 	
 	
@@ -61,7 +63,7 @@ public class URI_URL_URN {
 		//4)从 sun.net.www.protocol.(协议).Handler类
 		   //jdk 实现的协议有：http,https,ftp,file,jar
 		System.setProperty("java.protocol.handler.pkgs", "org.java.net");
-		
+		//URL.setURLStreamHandlerFactory(new ClasspathURLStreamHandlerFactory()); 工厂方式
 		URL classpath = new URL("classpath:config.properties");
 		URLConnection conn = classpath.openConnection();
 		try(InputStream is = conn.getInputStream();
