@@ -19,6 +19,8 @@ import java.util.Date;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 
+import sun.security.jca.ProviderList;
+import sun.security.jca.Providers;
 import sun.security.x509.AlgorithmId;
 import sun.security.x509.CertificateAlgorithmId;
 import sun.security.x509.CertificateSerialNumber;
@@ -31,6 +33,51 @@ import sun.security.x509.X509CertInfo;
 
 //java中密码的使用Cipher
 public class Cryptography {
+	
+	
+	/**
+	 * https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#ProviderArch
+	 * provider
+	 * 
+	 * 
+	 * props.put("security.provider.1", "sun.security.provider.Sun");
+	 * props.put("security.provider.2", "sun.security.rsa.SunRsaSign");
+	 * props.put("security.provider.3","com.sun.net.ssl.internal.ssl.Provider");
+	 * props.put("security.provider.4", "com.sun.crypto.provider.SunJCE");
+	 * props.put("security.provider.5", "sun.security.jgss.SunProvider");
+	 * props.put("security.provider.6", "com.sun.security.sasl.Provider");
+	 * 
+	 * Security.getProperty("security.provider." + i);
+	 *             | 
+	 *             ProviderList
+	 *                     --ProviderConfig 
+	 *                     --ServiceList 
+	 * Transform new 
+	 * ServiceId("Cipher",transform.transform) 
+	 * GetInstance.getServices(cipherServices)
+	 * List<Service> new Cipher(null, s, t, transformation, transforms)
+	 * 
+	 * 
+	 * 
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
+	
+	public void v(){
+		//java.security Properties
+		//ProviderList.fromSecurityProperties()
+		  //ProviderConfig(className, argument)
+		ProviderList list =Providers.getProviderList();
+		//// algorithm/mode/padding ==transformation
+		//List<Transform> Cipher.getTransforms(String transformation)
+		// cipherServices.add(new ServiceId("Cipher", transform.transform));
+		//List<Service> services = GetInstance.getServices(cipherServices);
+		  //list.getServices(cipherServices)
+		//Transform  根据// algorithm/mode/padding  匹配spi service provider interfaces
+		//service 匹配规则  type, algorithm
+		//java.security.Provider.getService(String, String)
+	}
 
 	
 	public static void main(String[] args)throws Exception {

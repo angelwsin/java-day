@@ -30,7 +30,7 @@ public class App
         TrustManagerFactory trustManager = TrustManagerFactory.getInstance("");
         trustManager.init(keyStore);
         ssLContext.init(factory.getKeyManagers(), trustManager.getTrustManagers(), null);
-        
+        ssLContext.getSocketFactory();
         SSLEngine  engine =  ssLContext.createSSLEngine();
     }
 }

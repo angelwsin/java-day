@@ -15,7 +15,10 @@ public class Algorithm {
     
     
     //对称性 相同的密钥   非对称公钥，私钥
-    
+    //algorithm/mode/padding
+	//AES采用分块加密，根据具体的处理策略，分为多种加密模式,AES是分块加密，块的大小与密钥长度一致,因此有填充方式
+	//DES，全称为“Data Encryption Standard”，中文名为“数据加密标准”，是一种使用密钥加密的块算法。
+	//3DES（或称为Triple DES）是三重数据加密算法（TDEA，Triple Data Encryption Algorithm）块密码的通称。它相当于是对每个数据块应用三次DES加密算法
     //对称性加密算法：AES,DES,3DES
     
     
