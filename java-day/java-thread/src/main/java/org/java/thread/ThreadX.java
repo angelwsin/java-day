@@ -21,6 +21,16 @@ public class ThreadX {
 		Field field = h.getClass().getDeclaredField("eetop");
 		field.setAccessible(true);
 		Thread.sleep(1000);
+		
 		System.out.println(field.get(h));
+		
+		h.isAlive();
+		h.sleep(9999);
+		Thread.interrupted();
+		h.isInterrupted();
+		h.join();
 	}
+	
+	
+
 }
