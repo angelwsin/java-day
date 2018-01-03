@@ -10,6 +10,7 @@ public class ConcurrentHashMap_1_7 {
 		//ConcurrentHashMap 1.7  中维护一个分段锁数组segments(每一个Segment是实现了可重入锁ReentrantLock)
 		//这样ConcurrentHashMap 比原来的HashMap多了一级
 		
+		//ConcurrentHashMap  读和写加锁问题 以及可见性问题
 		/**
 		 * 
 		 * 
