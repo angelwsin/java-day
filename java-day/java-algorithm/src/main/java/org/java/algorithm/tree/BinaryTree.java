@@ -112,5 +112,8 @@ public class BinaryTree<T> {
     public int deep(){
         return 0;
     }
+    
+    
+    
 
 }
