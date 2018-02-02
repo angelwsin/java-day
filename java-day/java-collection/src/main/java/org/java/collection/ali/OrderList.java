@@ -19,6 +19,7 @@ public class OrderList {
 	public void add(int e){
 		synchronized (elements) {
 			//CopyOnWriteArrayList 读多写少
+			//读操作远远大于写操作 volatile  实现无锁并发 参考 jdk1.6 ConcrrentHashMap 读写
 			    ArrayList<Object> list  = new ArrayList<>(elements.size()+1);
 			    tree.insert(e);
 	            tree.inOrder(list);

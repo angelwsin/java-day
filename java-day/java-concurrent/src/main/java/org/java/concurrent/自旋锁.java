@@ -17,6 +17,7 @@ public class 自旋锁 {
 	 * 资源申请者只能进入睡眠状态。但是自旋锁不会引起调用者睡眠，如果自旋锁已经被别的执行单元保持，调用者就一直循环在那里看是否该自旋锁的保持者已经释放了锁，"自旋"一词就是因此而得名。
 
 	 * 
+	 * https://www.ibm.com/developerworks/cn/linux/l-cn-spinlock_mips/index.html
 	 * 
 	 */
 

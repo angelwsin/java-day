@@ -3,6 +3,8 @@ package org.java.concurrent;
 import java.util.concurrent.ConcurrentHashMap;
 
 //Like {@link Hashtable} but unlike {@link HashMap}, this class  does not allow null to be used as a key or value
+
+////JDK1.6之后，对synchronized优化，根据不同情形出现了偏向锁、轻量锁、自旋锁，重量级锁  jdk1.8 
 public class ConcurrentHashMap_1_7 {
 	public static void main(String[] args) {
 		ConcurrentHashMap<String,String> map = new ConcurrentHashMap<String, String>();
