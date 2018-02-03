@@ -38,7 +38,7 @@ public class ACID {
      *  分布式事务一致性:
      *  1)2pc  (单点，阻塞)
      *  2)同步写
-     *  3)TCC
+     *  3)TCC  https://mp.weixin.qq.com/s/mMlY29CLeC859v_qVGCyGg
      *  4)借助消息中间件实现
      *  
      *  
