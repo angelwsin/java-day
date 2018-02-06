@@ -16,8 +16,10 @@ public class JMM {
 	//Java includes several language constructs, including volatile, final, and synchronized
 	
 	//c 栈 https://www.cnblogs.com/findumars/p/7545818.html
-	//内存屏障  http://www.rdrop.com/users/paulmck/scalability/paper/whymb.2009.04.05a.pdf
+	//内存屏障/栅栏(fence)  http://www.rdrop.com/users/paulmck/scalability/paper/whymb.2009.04.05a.pdf
 	//https://www.jianshu.com/p/2ab5e3d7e510
+	//内存屏障只与内存模型中描述的“获取”和“释放”等高级概念间接相关。 内存屏障本身并不是“同步屏障”
+	//内存屏障指令直接控制CPU与其缓存之间的交互，其写入缓冲区包含等待刷新到内存的存储区和/或等待装载或推测性执行指令的缓冲区,这些影响可能会导致高速缓存，主内存和其他处理器之间的进一步交互
 	
 	/*硬件层的内存屏障分为两种：Load Barrier 和 Store Barrier即读屏障和写屏障。
 	内存屏障有两个作用：
@@ -58,6 +60,60 @@ public class JMM {
 	}*/
 	   //这看起来非常聪明 - 在通用代码路径上避免了同步。 只有一个问题 - 它不起作用。 为什么不？ 最明显的原因是，初始化实例和写入实例字段的写入操作可以由编译器或缓存重新排序，这会产生返回看起来是部分构造的东西的效果。 结果是我们读取一个未初始化的对象。
 	//使用volatile关键字可以消除尝试使用双重检查锁定模式时出现的问题,在新的内存模型下，使实例字段变为volatile将会“修复”带有双重检查的锁定的问题，因为那么在构造线程的Something的初始化和它的值的返回之间将会有一个Before-Before关系 读取它的线程。
+	
+	
+	/*
+	 * 内存屏障
+	 * 
+	 * 1)LoadLoad Barriers
+	 *   Load1; LoadLoad; Load2
+	 * 
+	 * 2)StoreStore Barriers
+	 *   Store1; StoreStore; Store2
+	 *    Store1's data are visible to other processors (i.e., flushed to memory)
+	 * 3)LoadStore Barriers
+	 *   Load1; LoadStore; Store2
+	 * 
+	 * 4)StoreLoad Barriers
+	 *   Store1; StoreLoad; Load2
+	 *    ensures that Store1's data are made visible to other processors (i.e., flushed to main memory)
+	 * 
+	 * 
+	 * 
+	 * volatile 内存屏障的支持
+	 * final    内存屏障的支持  final-field rule requiring a StoreStore barrier 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * jmm  http://ifeve.com/java-memory-model-1/
+	 * 
+	 * 
+	 *  
+	 *        happen-before  程序员 层
+	 *        
+	 *        
+	 *        Memory Barriers   jmm层
+	 *        
+	 *        
+	 *        reordering        编译器，处理器，runtime等
+	 * 
+	 * 
+	 * 
+	 * 重排序
+	 * 1，数据依赖性   单线程，多线程都不支持重排序 
+	 * 2，as-if-serial语义  保证单线程的执行结果正确 不对数据依赖排序
+	 * 重排序对多线程的影响 如
+	 * if (flag) {                //3
+     *   int i =  a * a;        //4
+     *   ……
+     *  }
+	 *   在多线程程序中，对存在控制依赖的操作重排序，可能会改变程序的执行结果，编译器和处理器会采用猜测（Speculation）执行来克服控制相关性对并行度的影响
+	 *    以处理器的猜测执行为例，执行线程B的处理器可以提前读取并计算a*a，然后把计算结果临时保存到一个名为重排序缓冲（reorder buffer ROB）的硬件缓存中
+	 * 
+	 * 
+	 * 
+	 */
 	public static void main(String[] args) {
 		 int tid = 0x000000000fb0c800;
 		 System.out.println(tid);

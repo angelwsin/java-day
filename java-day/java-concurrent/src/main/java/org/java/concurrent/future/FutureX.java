@@ -1,7 +1,5 @@
 package org.java.concurrent.future;
 
-import java.util.concurrent.FutureTask;
-
 public class FutureX {
 	
 	public static void main(String[] args) {

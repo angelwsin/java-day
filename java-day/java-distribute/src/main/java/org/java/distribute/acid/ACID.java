@@ -44,6 +44,12 @@ public class ACID {
      *  
      *  
      *  Zookeeper的ZAB，Viewstamped Replication（VR），raft，multi-paxos，这些都可以被称之为Leader-based一致性协议
+     *    ZooKeeper是个 CP的 极端情况下不能保证A
+     *    
+     * ZooKeeper是个 CP的，即任何时刻对ZooKeeper的访问请求能得到一致的数据结果，同时系统对网络分割具备容错性;但是它不能保证每次服务请求的可用性
+     * (注：也就 是在极端环境下，ZooKeeper可能会丢弃一些请求，消费者程序需要重新请求才能获得结果)。
+     * 但是别忘了，ZooKeeper是分布式协调服务，它的 职责是保证数据(注：配置数据，状态数据)在其管辖下的所有服务之间保持同步、一致;所以就不难理解为什么ZooKeeper被设计成CP而不是AP特性 的了
+     * http://cloud.51cto.com/art/201504/474415.htm
      *  
      *  扩展协议:        实现者                              数据一致性 
      *  totem协议              pacemaker      强一致性
