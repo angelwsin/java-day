@@ -20,5 +20,7 @@ public class App
     	for(VirtualMachineDescriptor desc : localList){
     		System.out.println(desc.displayName()+":"+desc.id());
     	}
+    	System.out.println(System.getProperty("sun.java.launcher"));
+    	System.out.println(System.getProperty("sun.java.command"));
     }
 }

@@ -1,5 +1,12 @@
 package org.java.jdbc.mybatis;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.ibatis.reflection.DefaultReflectorFactory;
+import org.apache.ibatis.reflection.MetaClass;
+import org.apache.ibatis.reflection.MetaObject;
+import org.apache.ibatis.reflection.SystemMetaObject;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class Mybatis {
@@ -83,6 +90,17 @@ public class Mybatis {
               *     
               *     
               */
+         
+         
+       //使用ongl表达式
+         MetaObject metaStatementHandler = SystemMetaObject.forObject(new User());
+         List<String>  str  = new ArrayList<String>();
+         str.add("xiaoming");
+         metaStatementHandler.setValue("str", str);
+         System.out.println(metaStatementHandler.getValue("str"));
+         
+         MetaClass userMeta =   MetaClass.forClass(User.class, new DefaultReflectorFactory());
+         //userMeta.getGetInvoker("").
          
          
     }

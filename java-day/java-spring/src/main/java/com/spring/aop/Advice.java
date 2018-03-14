@@ -11,7 +11,12 @@ public class Advice {
     
 
     
-    /*
+    /*              advisor 有  pointcut等
+     *            |
+     *     advisor(顾问)--Base interface holding AOP advice
+     *       |
+     *       |_Advice通知 -- Implementations can be any type of advice, such as Interceptors
+
      *      AspectJAwareAdvisorAutoProxyCreator
      * 
      * pointcut

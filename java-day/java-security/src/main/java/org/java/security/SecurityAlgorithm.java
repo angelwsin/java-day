@@ -96,9 +96,9 @@ public class SecurityAlgorithm {
         /*CertificateFactory certFactory = CertificateFactory.getInstance("");
         certFactory.generateCertificate(inStream)
         keyStore.setCertificateEntry(alias, cert);*/
-        keyStore.load(stream, password);
+        //keyStore.load(stream, password);
         KeyManagerFactory factory =  KeyManagerFactory.getInstance("");
-        factory.init(keyStore, password);
+       // factory.init(keyStore, );
         //服务端 使用私密 解密密码 以后通讯就使用这个密码加密
         TrustManagerFactory trustManager = TrustManagerFactory.getInstance("");
         trustManager.init(keyStore);

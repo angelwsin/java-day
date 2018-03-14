@@ -6,6 +6,8 @@ package org.java.hotspot;
  */
 public class App 
 {
+	
+	static volatile int x = 5;
     public static void main( String[] args )
     {
         
@@ -42,6 +44,24 @@ public class App
                      [Times: user=0.00 sys=0.00, real=0.01 secs] 
                         
         */
+    	
+    	x = 9;
+    	ch();
+    	
+    	try {
+			Thread.sleep(Integer.MAX_VALUE);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    
+    
+    static void ch(){
+    	for(int i=0;i<200;i++){
+    		x = i;
+    	}
     }
     
     

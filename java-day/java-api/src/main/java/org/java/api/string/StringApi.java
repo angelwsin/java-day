@@ -9,6 +9,14 @@ public class StringApi {
         
         String  str ="hello ";
         str+=" world ";// 编译的 字节码  实现 使用   new  // class java/lang/StringBuilder
+        
+        String v  = "xyz";
+        /*
+         * 一个字符串可以被实现为一个三个字段的对象 - 一个字符数组，一个数组的偏移量和一个长度。 以这种方式实现String的基本原理是，
+         * 它允许多个String和StringBuffer对象共享相同的字符数组，避免额外的对象分配和复制。 
+         * 所以，例如，方法String.substring（）可以通过创建一个与原始String共享相同字符数组的新字符串来实现，并且仅在长度和偏移字段上有所不同。 对于字符串，这些字段都是最终字段。
+         */
+        v.substring(2);
     }
     
     

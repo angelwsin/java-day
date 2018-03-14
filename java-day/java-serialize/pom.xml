@@ -22,5 +22,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+<dependency>
+    <groupId>com.caucho</groupId>
+    <artifactId>hessian</artifactId>
+    <version>4.0.51</version>
+</dependency>
+    
   </dependencies>
 </project>

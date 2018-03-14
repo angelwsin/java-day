@@ -30,6 +30,10 @@ public class App
 {
     public static void main( String[] args )
     {
+    	
+    	//线程的状态和操作
+    	
+    	//线程的问题:死锁，活锁，饥饿
        /*
         * java 线程模型
         * 

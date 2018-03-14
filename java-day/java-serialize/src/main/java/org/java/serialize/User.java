@@ -1,5 +1,7 @@
 package org.java.serialize;
 
+import java.io.IOException;
+import java.io.ObjectStreamException;
 import java.io.Serializable;
 
 public class User implements Serializable{
@@ -20,6 +22,19 @@ public class User implements Serializable{
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+    
+    
+    private void writeObject(java.io.ObjectOutputStream out)throws IOException{
+    	System.out.println("out");
+    }
+    
+    private void readObject(java.io.ObjectInputStream in)throws IOException, ClassNotFoundException{
+    	System.out.println("in");
+    }
+    
+    private void readObjectNoData()throws ObjectStreamException{
+    	System.out.println("nodata");
     }
     
     
