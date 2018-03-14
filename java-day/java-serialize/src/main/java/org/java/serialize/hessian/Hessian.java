@@ -5,12 +5,21 @@ import java.lang.reflect.Method;
 
 public class Hessian {
 	
-	//hessian序列化时，一定要注意子类和父类不能有同名字段
+	//hessian序列化时，一定要注意子类和父类不能有同名字段  
 	
 	//枚举对象的序列化/反序列化
 	
 	
 	
+	//hessian 序列化过程
+	/**
+	 * 
+	 * @author wu.qiang
+	 * out
+	 * 
+	 * 
+	 * input
+	 */
 	
 	enum  x {
 		

@@ -11,6 +11,17 @@ public class App
 {
     public static void main( String[] args )throws Exception
     {
+    	
+    	/**
+    	 * java 序列化和反序列化
+    	 * 
+    	 * 1.性能问题
+    	 * 2.存储和传输效率问题
+    	 * 3.需要实现serializable
+    	 * 4.向后兼容性问题 serialVersionUID
+    	 * 
+    	 * 
+    	 */
        
         //可以对每次序列化的内存空间复用  避免每次开辟空间的耗时
         ByteArrayOutputStream out = new ByteArrayOutputStream();
