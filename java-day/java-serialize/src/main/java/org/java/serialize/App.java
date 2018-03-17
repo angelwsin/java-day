@@ -1,10 +1,16 @@
 package org.java.serialize;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
 /**
- * Hello world!
+ * 序列化协议:
+ * 1.分隔符 如http协议使用 空格分割
+ * 2.固定长度
+ * 3.使用字段动态指定长度
+ * 
  *
  */
 public class App 
@@ -24,16 +30,18 @@ public class App
     	 */
        
         //可以对每次序列化的内存空间复用  避免每次开辟空间的耗时
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
+       // ByteArrayOutputStream out = new ByteArrayOutputStream();
+    	FileOutputStream out = new FileOutputStream(new File(System.getProperty("user.dir"))+"/user.txt");
         ObjectOutputStream output  = new ObjectOutputStream(out);
         User user = new User();
         user.setUserName("zhangsan");
+        //user.setPassword("26271621");
         output.writeObject(user);
         
-       byte[] x =  out.toByteArray();
+    /*   byte[] x =  out.toByteArray();
        for(byte b : x){
     	  System.out.println(Integer.toHexString(Byte.toUnsignedInt(b)));//  8421
-       }
+       }*/
        
        //java 的序列化协议
        //开头 魔数版本..........结束标志

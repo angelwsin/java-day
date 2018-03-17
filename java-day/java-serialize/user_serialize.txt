@@ -1,0 +1,36 @@
+AC ED (魔数)00 05(版本) 
+73(TC_OBJECT序列化类型此处为对象) 
+(以下为被序列化的desc)
+72(TC_CLASSDESC)
+00 17(class.name的长度)  
+6F 72 67 2E 6A 61 76 61 2E 73 65 72 69 61 6C 69  7A 65 2E 55 73 65 72 (class.name:org.java.serialize.User)
+00 00 00 00 00 00 00 01 (serialVersionUID)
+02 (flag标识如这个标识是SC_SERIALIZABLE) 
+00 01 (属性的个数)
+4C(属性类型)L
+00 08(属性utf-8字符长度)
+75 73 65 72 4E 61 6D 65(属性utf-8字符userName)
+(如果不是原始类型添加类型的签名如Ljava/lang/String)
+74 (签名的String的类型)
+00 12  
+4C 6A 61 76 61 2F 6C 61 6E 67 2F 53 74 72 69 6E  67 3B(类型的签名如Ljava/lang/String)
+78(TC_ENDBLOCKDATA标识以下写父类的类型及属性和子类类似)
+70 (写父类这里为空TC_NULL)
+(写属性值有两种情况，原始类型直接写，对象和数组类型循环序列化类的一样，下面是描述写String)
+74 (string类型)
+00 08 (string长度)
+7A 68 61 6E 67 73 61 6E (string值zhangsan)
+
+
+
+属性类型
+       B            byte
+     * C            char
+     * D            double
+     * F            float
+     * I            int
+     * J            long
+     * L            class or interface
+     * S            short
+     * Z            boolean
+     * [            array

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 
-public class User implements Serializable{
+public class User extends SuperUser implements Serializable{
 
     /**
      * 
@@ -13,6 +13,8 @@ public class User implements Serializable{
     
     
     private String userName;
+    
+    //private String password;
 
 
     public String getUserName() {
@@ -25,17 +27,28 @@ public class User implements Serializable{
     }
     
     
-    private void writeObject(java.io.ObjectOutputStream out)throws IOException{
+   /* private void writeObject(java.io.ObjectOutputStream out)throws IOException{
     	System.out.println("out");
     }
     
     private void readObject(java.io.ObjectInputStream in)throws IOException, ClassNotFoundException{
     	System.out.println("in");
-    }
+    }*/
     
-    private void readObjectNoData()throws ObjectStreamException{
+    /*private void readObjectNoData()throws ObjectStreamException{
     	System.out.println("nodata");
-    }
+    }*/
+
+
+	/*public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}*/
+    
     
     
 
