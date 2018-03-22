@@ -86,6 +86,7 @@ public class UserBcel {
 					sayGen.setMaxLocals();
 					sayGen.setMaxStack();
 					classGen.replaceMethod(method, sayGen.getMethod());
+					li.dispose();
 				}
 				
 				
