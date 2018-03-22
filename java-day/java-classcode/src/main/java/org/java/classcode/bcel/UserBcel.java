@@ -3,13 +3,14 @@ package org.java.classcode.bcel;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.util.Arrays;
 
 import org.apache.bcel.Repository;
 import org.apache.bcel.classfile.Code;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
+import org.apache.bcel.classfile.StackMap;
+import org.apache.bcel.classfile.StackMapEntry;
 import org.apache.bcel.generic.ClassGen;
 import org.apache.bcel.generic.ConstantPoolGen;
 import org.apache.bcel.generic.GETSTATIC;
@@ -22,14 +23,13 @@ import org.apache.bcel.generic.LSTORE;
 import org.apache.bcel.generic.LSUB;
 import org.apache.bcel.generic.LocalVariableGen;
 import org.apache.bcel.generic.MethodGen;
-import org.apache.bcel.generic.ObjectType;
 import org.apache.bcel.generic.Type;
 import org.java.user.User;
 
 /**
  * Apache Byte Code Engineering Library,BCEL 每项内容操作在JVM汇编语言的级别
  * @author wu.qiang
- *
+ *https://www.ibm.com/developerworks/cn/java/j-dyn0414/index.html
  */
 public class UserBcel {
 	
@@ -78,11 +78,12 @@ public class UserBcel {
 					InstructionList out = new InstructionList();
 					out.append(new GETSTATIC(index));
 					out.append(new INVOKESTATIC(tIndex));
-					out.append(new LLOAD(1));
+					out.append(new LLOAD(localV.getIndex()));
 					out.append(new LSUB());
 					InstructionHandle locEnd = out.append(new INVOKEVIRTUAL(mIndex));
 					localV.setEnd(locEnd);
 					li.insert(end.getInstruction(), out);
+					sayGen.setMaxLocals();
 					sayGen.setMaxStack();
 					classGen.replaceMethod(method, sayGen.getMethod());
 				}
@@ -95,7 +96,7 @@ public class UserBcel {
 		
 		try(ByteArrayOutputStream bytes = new ByteArrayOutputStream();) {
 			//classGenx.getJavaClass().dump(bytes);
-			
+			System.out.println(classGenx.getJavaClass().getConstantPool().toString());
 			Arrays.asList(classGenx.getJavaClass().getMethods()).forEach(e->{
 				Code code = e.getCode();
 				System.out.println(code);
