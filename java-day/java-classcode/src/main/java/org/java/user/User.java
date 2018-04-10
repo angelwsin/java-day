@@ -1,6 +1,8 @@
 package org.java.user;
 
+import org.java.classcode.bcel.StatisticsTime;
 
+@StatisticsTime("say")
 public class User {
 	
 	public User() {
@@ -8,13 +10,12 @@ public class User {
 	
 	
 	public int say() {
-		
-		new Object();
-		new Object();
-		int x = 4;
-		int z = 5;
-		int y = 6;
-		return y;
+	 int z = x();
+	 return z;
+	}
+	
+	public int x() {
+		return 4;
 	}
 	
 	

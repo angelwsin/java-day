@@ -3,13 +3,13 @@ package org.java.classcode.bcel;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import org.apache.bcel.Constants;
+import org.apache.bcel.Const;
 import org.apache.bcel.classfile.ClassParser;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
 import org.apache.bcel.generic.ClassGen;
 import org.apache.bcel.generic.ConstantPoolGen;
-import org.apache.bcel.generic.InstructionConstants;
+import org.apache.bcel.generic.InstructionConst;
 import org.apache.bcel.generic.InstructionFactory;
 import org.apache.bcel.generic.InstructionList;
 import org.apache.bcel.generic.MethodGen;
@@ -47,18 +47,18 @@ public class BCELTiming {
         // save time prior to invocation
         ilist.append(ifact.createInvoke("java.lang.System",
             "currentTimeMillis", Type.LONG, Type.NO_ARGS, 
-            Constants.INVOKESTATIC));
+            Const.INVOKESTATIC));
         ilist.append(InstructionFactory.
             createStore(Type.LONG, slot));
          
         // call the wrapped method
         int offset = 0;
-        short invoke = Constants.INVOKESTATIC;
+        short invoke = Const.INVOKESTATIC;
         if (!methgen.isStatic()) {
             ilist.append(InstructionFactory.
                 createLoad(Type.OBJECT, 0));
             offset = 1;
-            invoke = Constants.INVOKEVIRTUAL;
+            invoke = Const.INVOKEVIRTUAL;
         }
         for (int i = 0; i < types.length; i++) {
             Type type = types[i];
@@ -78,28 +78,28 @@ public class BCELTiming {
         // print time required for method call
         ilist.append(ifact.createFieldAccess("java.lang.System",
             "out",  new ObjectType("java.io.PrintStream"),
-            Constants.GETSTATIC));
-        ilist.append(InstructionConstants.DUP);
-        ilist.append(InstructionConstants.DUP);
+            Const.GETSTATIC));
+        ilist.append(InstructionConst.DUP);
+        ilist.append(InstructionConst.DUP);
         String text = "Call to method " + methgen.getName() +
             " took ";
         ilist.append(new PUSH(pgen, text));
         ilist.append(ifact.createInvoke("java.io.PrintStream",
             "print", Type.VOID, new Type[] { Type.STRING },
-            Constants.INVOKEVIRTUAL));
+            Const.INVOKEVIRTUAL));
         ilist.append(ifact.createInvoke("java.lang.System", 
             "currentTimeMillis", Type.LONG, Type.NO_ARGS, 
-            Constants.INVOKESTATIC));
+            Const.INVOKESTATIC));
         ilist.append(InstructionFactory.
             createLoad(Type.LONG, slot));
-        ilist.append(InstructionConstants.LSUB);
+        ilist.append(InstructionConst.LSUB);
         ilist.append(ifact.createInvoke("java.io.PrintStream",
             "print", Type.VOID, new Type[] { Type.LONG },
-            Constants.INVOKEVIRTUAL));
+            Const.INVOKEVIRTUAL));
         ilist.append(new PUSH(pgen, " ms."));
         ilist.append(ifact.createInvoke("java.io.PrintStream",
             "println", Type.VOID, new Type[] { Type.STRING },
-            Constants.INVOKEVIRTUAL));
+            Const.INVOKEVIRTUAL));
              
         // return result from wrapped method call
         if (result != Type.VOID) {
