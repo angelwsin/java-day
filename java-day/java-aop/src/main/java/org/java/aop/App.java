@@ -73,7 +73,8 @@ public class App
      
      
      //代理对象如下
-     
+     //Proxy只能对interface进行代理，无法实现对class的动态代理。观察动态生成的代理继承关系图可知原因，
+               //他们已经有一个固定的父类叫做Proxy，Java语法限定其不能再继承其他的父类
      /*
      public final class $Proxy0
      extends Proxy

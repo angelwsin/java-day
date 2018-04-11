@@ -10,6 +10,8 @@ public class OrderList {
 	
 	private final int  maxSize;
 
+	//读多写少 有序 
+	// 二元组 位置和数据
 	public OrderList(int maxSize) {
 		elements = new ArrayList<>(maxSize);
 		this.maxSize = maxSize;
