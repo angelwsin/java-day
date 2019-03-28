@@ -23,7 +23,7 @@ public class App
     		list.add(user);
     	}
     	
-    	list.stream().collect(Collectors.groupingBy(classifier))
+    	//list.stream().collect(Collectors.groupingBy(classifier))
     	
     }
 }

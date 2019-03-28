@@ -3,6 +3,11 @@ package org.java.serialize.hessian;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+
+/**
+ * http://hessian.caucho.com/doc/hessian-overview.xtp
+ * 官方文档
+ */
 public class Hessian {
 	
 	//hessian序列化时，一定要注意子类和父类不能有同名字段  

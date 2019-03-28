@@ -3,6 +3,8 @@ package org.java.serialize;
 import java.io.IOException;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 public class User extends SuperUser implements Serializable{
 
@@ -14,7 +16,11 @@ public class User extends SuperUser implements Serializable{
     
     private String userName;
     
-    //private String password;
+    private String password;
+
+    private BigDecimal prices;
+
+    private Date       birth;
 
 
     public String getUserName() {
@@ -40,16 +46,28 @@ public class User extends SuperUser implements Serializable{
     }*/
 
 
-	/*public String getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
 
 	public void setPassword(String password) {
 		this.password = password;
-	}*/
-    
-    
-    
+	}
 
+    public BigDecimal getPrices() {
+        return prices;
+    }
+
+    public void setPrices(BigDecimal prices) {
+        this.prices = prices;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
 }
