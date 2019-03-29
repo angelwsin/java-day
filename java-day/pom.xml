@@ -143,5 +143,6 @@
     <module>java-stream</module>
     <module>java-biz</module>
     <module>java-spring-boot</module>
+      <module>java-jdk</module>
   </modules>
 </project>

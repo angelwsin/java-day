@@ -7,8 +7,11 @@ import java.util.stream.Collectors;
 
 /**
  * java8 stream 流的概念
- * 
- * map reduce
+ *
+ * 管道
+ * an intermediate or terminal stream operation
+ *
+ * Stream pipelines may execute either sequentially or in parallel
  *
  */
 public class App 
@@ -24,6 +27,8 @@ public class App
     	}
     	
     	//list.stream().collect(Collectors.groupingBy(classifier))
+
+		list.stream().filter(user -> user.getAge()==1).count();
     	
     }
 }
