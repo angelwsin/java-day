@@ -144,5 +144,7 @@
     <module>java-biz</module>
     <module>java-spring-boot</module>
       <module>java-jdk</module>
+      <module>task</module>
+      <module>java-quartz</module>
   </modules>
 </project>
