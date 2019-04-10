@@ -9,5 +9,8 @@ public class 服务 {
 
     //以上强一致性
     //以下最终一致性
-    // Gossip Cassandra redis的哨兵模式选举master 去中心化、容错而又最终一致性的绝妙算法
+    // Gossip Cassandra redis的哨兵模式选举master Consul 去中心化、容错而又最终一致性的绝妙算法
+
+    //异步复制？
+    //eureka
 }
