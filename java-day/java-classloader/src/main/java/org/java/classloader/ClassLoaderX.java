@@ -65,19 +65,29 @@ public class ClassLoaderX
      
      sun.misc.Launcher l = sun.misc.Launcher.getLauncher();
      
-     //根类加载器的路径
+     //根类加载器的路径//
+        //BootstrapLoader是用C++语言实现的，它所加载的是JVM中最底层的类，它加载时的搜索路径是由sun.boot.class.path所指定的。
      System.out.println("根类加载器");
       URLClassPath  path =   Launcher.getBootstrapClassPath();
       for(URL url : path.getURLs()){
           System.out.println(url.getFile());
       }
-      
+      //extClassLoader是用来加载java的一些库的，它加载时的搜索路径是由java.ext.dirs来决定的，该加载器在加载时不同于其他加载器，
+        //
+        //它加载时会搜索指定路径下的所有子目录，也就是说它会搜索java.ext.dirs所指定下的所有子目录下的class文件或jar文件。
+        //
+        //同时也可以用参数-Djava.ext.dirs来改变它的搜索路径。
       URLClassLoader   ext = (URLClassLoader) l.getClassLoader().getParent();
       System.out.println("ext  类加载器"+ext);
       for(URL url : ext.getURLs()){
           System.out.println(url.getFile());
       }
-      
+      //AppClassLoader也称SystemClassLoader, 它的搜索路径是由java.class.path来指定的，
+        //
+        //注意：AppClassLoader不会搜索java.class.path下的子目录的，所以在在加载子目录中的
+        //
+        //资源文件时要指定相对目录，如最开始的那个例子。
+        //InputStream is = TestSendHttp.class.getClassLoader().getResourceAsStream("dyan/sendhttp/dyan.txt");
       URLClassLoader app = (URLClassLoader) l.getClassLoader();
       System.out.println("系统类加载或app "+app);
       for(URL url : app.getURLs()){
