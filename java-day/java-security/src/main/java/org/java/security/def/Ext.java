@@ -22,7 +22,6 @@ public class Ext {
 	public static void main(String[] args) {
 		
 		Security.insertProviderAt(new ProviderDef(), 8);
-		Security.
 		
 		try {
 			List<ServiceId> cipherServices = new ArrayList<>(1);

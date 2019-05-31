@@ -1,18 +1,23 @@
 package org.java.logs;
 
+import ch.qos.logback.classic.joran.JoranConfigurator;
+import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.net.URL;
+
 
 /**
- * Hello world!
+ * https://github.com/angelwsin/log.git
+ * 请参考
  *
  */
 public class App 
 {
     
     private static Logger log = LoggerFactory.getLogger(App.class);
-    public static void main( String[] args )
+    public static void main( String[] args )throws  Exception
     {
         
         
@@ -33,6 +38,16 @@ public class App
         
         
         System.out.println( "Hello World!" );
+
+
+       //工厂模式 ILoggerFactory
+        //初始化  org.slf4j.impl.StaticLoggerBinder  静态绑定找到实现类库
+        //得到配置文件 解析JoranConfigurator
+        // .xml 配置文件使用sax 解析规则 RuleStore(JoranConfigurator.addInstanceRules加载解析规则)
+        // 规则使用   标签对应的 动作 Action
+
+       //解析配置文件
+        new JoranConfigurator().doConfigure(new URL(""));
     }
     
     

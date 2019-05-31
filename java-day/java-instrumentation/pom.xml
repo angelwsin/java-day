@@ -22,6 +22,12 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+      <dependency>
+          <groupId>org.apache.skywalking</groupId>
+          <artifactId>apm-collector-core</artifactId>
+          <version>5.0.0-GA</version>
+      </dependency>
     
      <dependency>  
             <groupId>com.sun</groupId>  

@@ -22,5 +22,16 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <!--  限流熔断 -->
+    <dependency>
+      <groupId>com.alibaba.csp</groupId>
+      <artifactId>sentinel-core</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba.csp</groupId>
+      <artifactId>sentinel-annotation-aspectj</artifactId>
+      <version>1.6.0</version>
+    </dependency>
   </dependencies>
 </project>
